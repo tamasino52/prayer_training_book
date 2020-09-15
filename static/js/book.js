@@ -59,7 +59,7 @@ $(document).ready(function()
 	{
 		var height = $(window).scrollTop();
 		$('.home').css("height", (490-height).toString()+"px")
-		$('.home_container').css("top", (180-height).toString()+"px")
+		$('.home_container').css("top", (-height).toString()+"px")
 
 	}
 
@@ -79,6 +79,7 @@ $(document).ready(function()
 
 			hamburger.on('click', function()
 			{
+				console.log("ham clicked!")
 				menu.toggleClass('active');
 			});
 

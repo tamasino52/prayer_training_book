@@ -242,7 +242,7 @@ section
 }
 .parallax_background
 {
-	background-image: url("../../static/images/weekly.jpg");
+	background-image: url("../../static/images/about.jpg");
 	min-height: 60px;
 	position: absolute;
 	top: 0;
@@ -252,9 +252,9 @@ section
 
 	/* Create the parallax scrolling effect */
 	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-position: top;
+	background-repeat: repeat-x;
+	background-size: revert;
 }
 .background_image
 {
@@ -401,7 +401,7 @@ section
 	height: 490px;
 	min-height: 90px;
 	background: transparent;
-	z-index: 100;
+	z-index: 97;
 }
 .logo
 {
@@ -452,13 +452,13 @@ section
 .header_right
 {
 	position: absolute;
-	top: 50%;
+	top: 40px;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	-o-transform: translateY(-50%);
 	transform: translateY(-50%);
-	right: 27px;
+	right: 37px;
 }
 .social ul li:not(:first-child)
 {
@@ -535,7 +535,7 @@ section
 }
 .hamburger
 {
-	display: none;
+	z-index: 100;
 	margin-left: 20px;
 	cursor: pointer;
 }
@@ -694,29 +694,35 @@ section
 /*********************************
 5. Home
 *********************************/
-
 .home
 {
+	top:0;
+	right:0;
+	left:0;
+	z-index:96;
+	position:fixed;
 	min-height: 60px;
 	height: 490px;
 }
 .home_container
 {
 	position: absolute;
-	top: 180px;
+	top: 0px;
 	left: 0;
 	width: 100%;
-	padding-top: 0px;
 }
 
 .home_title h1
 {
+	text-align:center;
+	padding-top: 180px;
 	font-size: 36px;
 	color: #FFFFFF;
 	font-weight: 700;
 }
 .home_subtitle
 {
+	text-align:center;
 	font-size: 24px;
 	font-weight: 300;
 	color: #FFFFFF;
