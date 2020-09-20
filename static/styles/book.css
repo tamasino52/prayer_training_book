@@ -21,7 +21,7 @@
 1. Fonts
 ***********/
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Poppins:100,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
 
 /*********************************
 2. Body and some general stuff
@@ -37,8 +37,7 @@
 }
 body
 {
-	font-family: 'Poppins', sans-serif;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 400;
 	background: #FFFFFF;
 	color: #a5a5a5;
@@ -58,11 +57,10 @@ ul
 }
 p
 {
-	font-family: 'Poppins', sans-serif;
-	font-size: 14px;
+	font-size: 28px;
 	line-height: 1.875;
-	font-weight: 300;
-	color: rgba(0,0,0,0.5);
+	font-weight: 400;
+	color: rgba(0,0,0,1);
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -121,14 +119,13 @@ p::selection
 {
 	
 }
-h1{font-size: 48px;}
+h1{font-size: 52px;}
 h2{font-size: 36px;}
 h3{font-size: 24px;}
 h4{font-size: 18px;}
 h5{font-size: 14px;}
 h1, h2, h3, h4, h5, h6
 {
-	font-family: 'Poppins', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -341,11 +338,14 @@ section
 	color: #FFFFFF;
 	text-transform: uppercase;
 }
-.section_title
+.context
 {
-	font-size: 24px;
-	color: #2e3038;
+	font-family: 'Noto Serif KR', serif;
+	font-size: 26px;
+	line-height: 1.875;
 	font-weight: 500;
+	color: rgba(0,0,0,1);
+	-webkit-font-smoothing: antialiased;
 }
 .tags
 {
@@ -556,15 +556,19 @@ section
 	top: -100vh;
 	width: 100vw;
 	height: 100vh;
-	padding-right: 70px;
-	padding-top: 200px;
+	padding-top: 15px;
 	background: #1f2128;
 	z-index: 99;
-	-webkit-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
-	-moz-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
-	-ms-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
-	-o-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
-	transition: all 800ms cubic-bezier(.88,.31,.65,.91);
+	-webkit-transition: all 200ms cubic-bezier(.88,.31,.65,.91);
+	-moz-transition: all 200ms cubic-bezier(.88,.31,.65,.91);
+	-ms-transition: all 200ms cubic-bezier(.88,.31,.65,.91);
+	-o-transition: all 200ms cubic-bezier(.88,.31,.65,.91);
+	transition: all 200ms cubic-bezier(.88,.31,.65,.91);
+}
+.menu_close
+{
+	padding-bottom: 130px;
+	margin-right: 50px;
 }
 .menu.active
 {
@@ -658,6 +662,7 @@ section
 	position: absolute;
 	left: 0;
 	bottom: 15px;
+	margin-right: 15px;
 	width: 100%;
 }
 .menu_submit
@@ -716,10 +721,21 @@ section
 {
 	text-align:center;
 	padding-top: 180px;
-	font-size: 36px;
+	font-size: 42px;
 	color: #FFFFFF;
 	font-weight: 700;
 }
+
+.title
+{
+	text-align: center;
+	font-size: 36px;
+	color: #FFFFFF;
+	font-weight: 700;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 .home_subtitle
 {
 	text-align:center;
@@ -1291,11 +1307,10 @@ section
 {
 	margin-top: 0px;
 }
-.footer_title
+.footer_title h2
 {
-	font-size: 24px;
 	color: rgba(255,255,255);
-	font-weight: 500;
+	font-weight: 600;
 	line-height: 1.2;
 }
 .footer_list
@@ -1376,7 +1391,7 @@ section
 }
 .latest_title
 {
-	font-size: 16px;
+	font-size: 24px;
 	font-weight: 500;
 	color: #FFFFFF;
 	line-height: 1.2;
@@ -1399,14 +1414,14 @@ section
 {
 	display: inline-block;
 	content: '|';
-	font-size: 12px;
+	font-size: 18px;
 	color: #FFFFFF;
 	margin-left: 10px;
 	margin-right: 10px;
 }
 .latest_episode_info ul li a
 {
-	font-size: 12px;
+	font-size: 18px;
 	font-weight: 300;
 	color: #FFFFFF;
 }

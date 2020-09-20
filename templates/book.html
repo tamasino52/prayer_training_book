@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
 <title>Episode</title>
 <meta charset="utf-8">
@@ -7,10 +7,10 @@
 <meta name="description" content="My Podcast template project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="../static/styles/bootstrap-4.1.2/bootstrap.min.css">
-<link href="../static/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="../static/plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../static/styles/book.css">
 <link rel="stylesheet" type="text/css" href="../static/styles/book_responsive.css">
+
 </head>
 <body>
 
@@ -29,8 +29,14 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <div class="home_title"><h1>First Title</h1></div>
-                    <div class="home_subtitle">2020-09-15</div>
+                    <div class="home_title">
+                        <h1>
+                            {% block title %}{% endblock %}
+                        </h1>
+                    </div>
+                    <div class="home_subtitle">
+                        {% block subtitle %}{% endblock %}
+                    </div>
                 </div>
 		    </div>
         </div>
@@ -90,26 +96,28 @@
 
     <!-- Menu -->
 	<div class="menu">
-		<div class="menu_content d-flex flex-column align-items-end justify-content-start">
-			<ul class="menu_nav_list text-right">
-				<li><a href="">Home</a></li>
-				<li><a href="">About</a></li>
-				<li><a href="">Episodes</a></li>
-				<li><a href="">Blog</a></li>
-				<li><a href="">Contact</a></li>
-			</ul>
-			<div class="menu_extra d-flex flex-column align-items-end justify-content-start">
-				<div class="menu_submit"><a href="#">Submit your podcast</a></div>
-				<div class="social">
-					<ul class="d-flex flex-row align-items-start justify-content-start">
-						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-						<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-						<li><a href="#"><i class="fa fa-soundcloud" aria-hidden="true"></i></a></li>
-						<li><a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a></li>
-						<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
-					</ul>
-				</div>
-			</div>
+		<div class="menu_content justify-content-center">
+            <div class="row justify-content-end">
+                <i class="fa fa-times fa-4x menu_close" aria-hidden="true"></i>
+            </div>
+            <!-- Menu Contents-->
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-3 col-md-4 col-lg-5 text-right">
+                    <i id="font-sizeup" class="fa fa-minus-circle fa-2x"></i>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2 title">
+                    <span>글씨크기</span>
+                </div>
+                <div class="col-3 col-md-4 col-lg-5 text-left">
+                    <i id="font-sizeup" class="fa fa-plus-circle fa-2x"></i>
+                </div>
+            </div>
+
+            <div class="row d-flex align-items-center justify-content-center mt-5">
+                <span class="title">다크모드</span>
+                <i class="fa fa-check-square-o fa-2x"></i>
+            </div>
+
 		</div>
 	</div>
 
@@ -120,14 +128,9 @@
             <!-- Episode -->
             <div class="episode_col">
                 <div class="intro">
-                    <div class="section_title">소제목2</div>
-                    <div class="intro_text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum malesuada tellus a pretium. Proin quam nisi, maximus in pulvinar sed, viverra vitae est. Ut nibh nisl, malesuada nec massa nec, molestie varius lorem. Mauris aliquet eros eu luctus pulvinar. Suspendisse dapibus iaculis tellus, dignissim posuere felis elementum a. Curabitur a nibh vel eros accumsan semper vitae quis enim. Vivamus id leo a ante cursus semper. Suspendisse sit amet mattis mi. Pellentesque tellus diam, vehicula nec felis ut, suscipit porttitor nisl. Nam sit amet consequat nulla, ut mollis dolor. Vivamus id tristique tortor. Quisque ultrices odio urna, a maximus dui tincidunt sit amet. Morbi sagittis ipsum nec sem egestas congue.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum malesuada tellus a pretium. Proin quam nisi, maximus in pulvinar sed, viverra vitae est. Ut nibh nisl, malesuada nec massa nec, molestie varius lorem. Mauris aliquet eros eu luctus pulvinar. Suspendisse dapibus iaculis tellus, dignissim posuere felis elementum a. Curabitur a nibh vel eros accumsan semper vitae quis enim. Vivamus id leo a ante cursus semper. Suspendisse sit amet mattis mi. Pellentesque tellus diam, vehicula nec felis ut, suscipit porttitor nisl. Nam sit amet consequat nulla, ut mollis dolor. Vivamus id tristique tortor. Quisque ultrices odio urna, a maximus dui tincidunt sit amet. Morbi sagittis ipsum nec sem egestas congue.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum malesuada tellus a pretium. Proin quam nisi, maximus in pulvinar sed, viverra vitae est. Ut nibh nisl, malesuada nec massa nec, molestie varius lorem. Mauris aliquet eros eu luctus pulvinar. Suspendisse dapibus iaculis tellus, dignissim posuere felis elementum a. Curabitur a nibh vel eros accumsan semper vitae quis enim. Vivamus id leo a ante cursus semper. Suspendisse sit amet mattis mi. Pellentesque tellus diam, vehicula nec felis ut, suscipit porttitor nisl. Nam sit amet consequat nulla, ut mollis dolor. Vivamus id tristique tortor. Quisque ultrices odio urna, a maximus dui tincidunt sit amet. Morbi sagittis ipsum nec sem egestas congue.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum malesuada tellus a pretium. Proin quam nisi, maximus in pulvinar sed, viverra vitae est. Ut nibh nisl, malesuada nec massa nec, molestie varius lorem. Mauris aliquet eros eu luctus pulvinar. Suspendisse dapibus iaculis tellus, dignissim posuere felis elementum a. Curabitur a nibh vel eros accumsan semper vitae quis enim. Vivamus id leo a ante cursus semper. Suspendisse sit amet mattis mi. Pellentesque tellus diam, vehicula nec felis ut, suscipit porttitor nisl. Nam sit amet consequat nulla, ut mollis dolor. Vivamus id tristique tortor. Quisque ultrices odio urna, a maximus dui tincidunt sit amet. Morbi sagittis ipsum nec sem egestas congue.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum malesuada tellus a pretium. Proin quam nisi, maximus in pulvinar sed, viverra vitae est. Ut nibh nisl, malesuada nec massa nec, molestie varius lorem. Mauris aliquet eros eu luctus pulvinar. Suspendisse dapibus iaculis tellus, dignissim posuere felis elementum a. Curabitur a nibh vel eros accumsan semper vitae quis enim. Vivamus id leo a ante cursus semper. Suspendisse sit amet mattis mi. Pellentesque tellus diam, vehicula nec felis ut, suscipit porttitor nisl. Nam sit amet consequat nulla, ut mollis dolor. Vivamus id tristique tortor. Quisque ultrices odio urna, a maximus dui tincidunt sit amet. Morbi sagittis ipsum nec sem egestas congue.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum malesuada tellus a pretium. Proin quam nisi, maximus in pulvinar sed, viverra vitae est. Ut nibh nisl, malesuada nec massa nec, molestie varius lorem. Mauris aliquet eros eu luctus pulvinar. Suspendisse dapibus iaculis tellus, dignissim posuere felis elementum a. Curabitur a nibh vel eros accumsan semper vitae quis enim. Vivamus id leo a ante cursus semper. Suspendisse sit amet mattis mi. Pellentesque tellus diam, vehicula nec felis ut, suscipit porttitor nisl. Nam sit amet consequat nulla, ut mollis dolor. Vivamus id tristique tortor. Quisque ultrices odio urna, a maximus dui tincidunt sit amet. Morbi sagittis ipsum nec sem egestas congue.</p>
+                    <div class="context">
+                        {% block context %}
+                        {% endblock %}
                     </div>
                 </div>
             </div>
@@ -142,7 +145,9 @@
 
 				<!-- Other Episodes -->
 				<div class="col-lg-12">
-					<div class="footer_title">Latest Episodes</div>
+					<div class="footer_title">
+                        <h2>다른 기도문</h2>
+                    </div>
 					<div class="latest_container">
 
 						<!-- Other 1 -->
@@ -154,15 +159,15 @@
 											<div class="show_fav_icon show_info_icon"><img class="svg" src="../static/images/bookmark.svg" alt=""></div>
 										</div>
 										<div class="latest_title_content ml-2">
-											<div class="latest_title">Season 4 Episode 47 - Deep in Crypto</div>
+											<div class="latest_title">태신자를 위한 기도</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="latest_episode_info ml-2">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li><a href="#">September 24, 2018</a></li>
-									<li><a href="#">Music</a></li>
+									<li><a href="#">2020-09-16</a></li>
+									<li><a href="#">조회수 30회</a></li>
 								</ul>
 							</div>
 						</div>
@@ -175,15 +180,15 @@
 											<div class="show_fav_icon show_info_icon"><img class="svg" src="../static/images/bookmark.svg" alt=""></div>
 										</div>
 										<div class="latest_title_content ml-2">
-											<div class="latest_title">Season 4 Episode 47 - Deep in Crypto</div>
+											<div class="latest_title">목장을 위한 기도</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="latest_episode_info ml-2">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li><a href="#">September 24, 2018</a></li>
-									<li><a href="#">Music</a></li>
+									<li><a href="#">2020-09-16</a></li>
+									<li><a href="#">조회수 12회</a></li>
 								</ul>
 							</div>
 						</div>
@@ -196,15 +201,15 @@
 											<div class="show_fav_icon show_info_icon"><img class="svg" src="../static/images/bookmark.svg" alt=""></div>
 										</div>
 										<div class="latest_title_content ml-2">
-											<div class="latest_title">Season 4 Episode 47 - Deep in Crypto</div>
+											<div class="latest_title">나라를 위한 기도</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="latest_episode_info ml-2">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li><a href="#">September 24, 2018</a></li>
-									<li><a href="#">Music</a></li>
+									<li><a href="#">2020-09-16</a></li>
+									<li><a href="#">조회수 2회</a></li>
 								</ul>
 							</div>
 						</div>
