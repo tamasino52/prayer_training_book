@@ -31,11 +31,11 @@
                 <div class="text-center">
                     <div class="home_title">
                         <h1>
-                            {% block title %}{% endblock %}
+                            {{ book_list[book_id]['title'] }}
                         </h1>
                     </div>
                     <div class="home_subtitle">
-                        {% block subtitle %}{% endblock %}
+                        이 기도문으로 {{ book_list[book_id]['watch'] }}번의 기도가 쌓였습니다
                     </div>
                 </div>
 		    </div>
@@ -137,12 +137,29 @@
 		</div>
 	</div>
 
+
+
 	<!-- Footer -->
 
 	<footer class="footer">
 		<div class="container">
-			<div class="row footer_content_row">
+            <!-- 이전, 목록, 다음 -->
+            <div class="btn-container d-flex justify-content-between align-self-center">
+                {% if book_id > 0 %}
+                    <a href="{{ book_id - 1 }}"><div class="show_fav_icon"><img class="svg icon-middle" src="../static/images/angle-left.svg"> 이전</div></a>
+                {% else %}
+                    <a href="{{ book_list.__len__() - 1 }}"><div class="show_fav_icon"><img class="svg icon-middle" src="../static/images/angle-double-left.svg"> 마지막으로</div></a>
+                {% endif %}
+                <a href="/"><div id="list-btn" class="show_fav_icon">목록으로</div></a>
 
+                {% if book_id < book_list.__len__() - 1 %}
+                    <a href="{{ book_id + 1 }}"><div class="show_fav_icon">다음 <img class="svg icon-middle" src="../static/images/angle-right.svg"></div></a>
+                {% else %}
+                    <a href="0"><div class="show_fav_icon">처음으로 <img class="svg icon-middle" src="../static/images/angle-double-right.svg"></div></a>
+                {% endif %}
+            </div>
+
+			<div class="row footer_content_row">
 				<!-- Other Episodes -->
 				<div class="col-lg-12">
 					<div class="footer_title">
@@ -150,70 +167,29 @@
                     </div>
 					<div class="latest_container">
 
+                        {% for book in book_list[book_id - 2:book_id] + book_list[book_id + 1:book_id + 3] %}
 						<!-- Other 1 -->
 						<div class="latest">
 							<div class="latest_title_container d-flex flex-row align-items-start justify-content-start">
-								<a href="book.html">
+								<a href="{{ book['id'] }}">
 									<div class="d-flex flex-row align-items-start justify-content-start">
 										<div class="latest_play">
-											<div class="show_fav_icon show_info_icon"><img class="svg" src="../static/images/bookmark.svg" alt=""></div>
+											<div class="show_fav_icon icon-small"><img class="svg" src="../static/images/bookmark.svg"></div>
 										</div>
 										<div class="latest_title_content ml-2">
-											<div class="latest_title">태신자를 위한 기도</div>
+											<div class="latest_title">{{ book['title'] }}</div>
 										</div>
 									</div>
 								</a>
 							</div>
 							<div class="latest_episode_info ml-2">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li><a href="#">2020-09-16</a></li>
-									<li><a href="#">조회수 30회</a></li>
+									<li><a href="{{ book['id'] }}">{{ book['update'] }}</a></li>
+									<li><a href="{{ book['id'] }}">조회수 {{ book['watch'] }}회</a></li>
 								</ul>
 							</div>
 						</div>
-                        <!-- Other 2 -->
-						<div class="latest">
-							<div class="latest_title_container d-flex flex-row align-items-start justify-content-start">
-								<a href="book.html">
-									<div class="d-flex flex-row align-items-start justify-content-start">
-										<div class="latest_play">
-											<div class="show_fav_icon show_info_icon"><img class="svg" src="../static/images/bookmark.svg" alt=""></div>
-										</div>
-										<div class="latest_title_content ml-2">
-											<div class="latest_title">목장을 위한 기도</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="latest_episode_info ml-2">
-								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li><a href="#">2020-09-16</a></li>
-									<li><a href="#">조회수 12회</a></li>
-								</ul>
-							</div>
-						</div>
-                        <!-- Other 3 -->
-						<div class="latest">
-							<div class="latest_title_container d-flex flex-row align-items-start justify-content-start">
-								<a href="book.html">
-									<div class="d-flex flex-row align-items-start justify-content-start">
-										<div class="latest_play">
-											<div class="show_fav_icon show_info_icon"><img class="svg" src="../static/images/bookmark.svg" alt=""></div>
-										</div>
-										<div class="latest_title_content ml-2">
-											<div class="latest_title">나라를 위한 기도</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="latest_episode_info ml-2">
-								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li><a href="#">2020-09-16</a></li>
-									<li><a href="#">조회수 2회</a></li>
-								</ul>
-							</div>
-						</div>
-
+                        {% endfor %}
 					</div>
 				</div>
 			</div>
