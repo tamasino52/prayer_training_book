@@ -28,11 +28,9 @@ $(document).ready(function()
 	var ctrl = new ScrollMagic.Controller();
 
 	setHeader();
-	initMenu();
 	initFavs();
 	initSvg();
 	initSinglePlayer();
-	initGallery();
 
 	$(window).on('resize', function()
 	{
@@ -63,32 +61,6 @@ $(document).ready(function()
 
 	}
 
-	/* 
-
-	3. Init Menu
-
-	*/
-
-	function initMenu()
-	{
-		if($('.menu').length)
-		{
-			var menu = $('.menu');
-			var hamburger = $('.hamburger');
-			var close = $('.menu_close');
-
-			hamburger.on('click', function()
-			{
-				console.log("ham clicked!")
-				menu.toggleClass('active');
-			});
-
-			close.on('click', function()
-			{
-				menu.toggleClass('active');
-			});
-		}
-	}
 
 	/* 
 
@@ -197,26 +169,6 @@ $(document).ready(function()
 				backgroundColor: '#000000',
 				errorAlerts: false,
 				warningAlerts: false
-			});
-		}
-	}
-
-	/* 
-
-	7. Init Gallery
-
-	*/
-
-	function initGallery()
-	{
-		if($('.gallery_item').length)
-		{
-			$('.colorbox').colorbox(
-			{
-				rel:'colorbox',
-				photo: true,
-				maxWidth:'95%',
-				maxHeight:'95%'
 			});
 		}
 	}

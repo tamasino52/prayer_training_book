@@ -727,6 +727,32 @@ section
 	text-transform: uppercase;
 }
 
+.book-info
+{
+	margin-top: 6px;
+	padding-left: 27px;
+}
+.book-info ul li:not(:last-of-type)::after
+{
+	display: inline-block;
+	content: '|';
+	font-size: 18px;
+	color: #000000;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.book-info ul li a
+{
+	font-size: 18px;
+	font-weight: 300;
+	color: #000000;
+}
+.book-info ul li a:hover
+{
+	color: #ff3500;
+}
+
+
 /*********************************
 6. Sidebar
 *********************************/

@@ -43,7 +43,7 @@ body
 	font-size: 14px;
 	font-weight: 400;
 	background: #FFFFFF;
-	color: #a5a5a5;
+	color: #000000;
 }
 div
 {
@@ -239,9 +239,10 @@ section
 }
 .parallax-window
 {
-    min-height: 400px;
+    min-height: 300px;
     background: transparent;
 }
+
 .parallax_background
 {
 	position: absolute;
@@ -249,6 +250,12 @@ section
 	left: 0;
 	width: 100%;
 	height: 100%;
+
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: top;
+	background-repeat: repeat-x;
+	background-size: revert;
 }
 .background_image
 {
@@ -376,293 +383,6 @@ section
 {
 	height: 70px;
 }
-.logo
-{
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
-	left: 33px;
-	height: 51px;
-	z-index: 1;
-}
-.logo a
-{
-	display: block;
-	width: 100%;
-	height: 100%;
-	font-size: 30px;
-	font-weight: 500;
-	color: #FFFFFF;
-}
-.logo a span
-{
-	font-weight: 100;
-	margin-right: 5px;
-}
-.logo a img
-{
-	vertical-align: top;
-	margin-left: 5px;
-}
-.main_nav ul li:not(:last-of-type)
-{
-	margin-right: 40px;
-}
-.main_nav ul li a
-{
-	font-size: 16px;
-	font-weight: 500;
-	color: #FFFFFF;
-}
-.main_nav ul li a:hover
-{
-	color: #ff3000;
-}
-.header_right
-{
-	position: absolute;
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
-	right: 27px;
-}
-.social ul li:not(:first-child)
-{
-	margin-left: 4px;
-}
-.social ul li
-{
-	width: 32px;
-	height: 32px;
-	border-radius: 50%;
-	border: solid 1px #FFFFFF;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.social ul li:hover
-{
-	border-color: #ff3000;
-}
-.social ul li a
-{
-	display: block;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-}
-.social ul li a i
-{
-	font-size: 14px;
-	color: #FFFFFF;
-	line-height: 30px;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.social ul li:hover a i
-{
-	color: #ff3000;
-}
-.submit
-{
-	height: 32px;
-	border: solid 1px #FFFFFF;
-	border-radius: 16px;
-	margin-right: 19px;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.submit a
-{
-	display: block;
-	height: 100%;
-	line-height: 30px;
-	font-size: 14px;
-	font-weight: 500;
-	color: #FFFFFF;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-.submit:hover
-{
-	border-color: #ff3000;
-}
-.submit:hover a
-{
-	color: #ff3000;
-}
-.hamburger
-{
-	display: none;
-	margin-left: 20px;
-	cursor: pointer;
-}
-.hamburger i
-{
-	font-size: 28px;
-	color: #FFFFFF;
-}
-
-/*********************************
-4. Menu
-*********************************/
-
-.menu
-{
-	position: fixed;
-	left: 0;
-	top: -100vh;
-	width: 100vw;
-	height: 100vh;
-	padding-right: 70px;
-	padding-top: 200px;
-	background: #1f2128;
-	z-index: 99;
-	-webkit-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
-	-moz-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
-	-ms-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
-	-o-transition: all 800ms cubic-bezier(.88,.31,.65,.91);
-	transition: all 800ms cubic-bezier(.88,.31,.65,.91);
-}
-.menu.active
-{
-	top: 0;
-}
-.menu_content
-{
-	width: 100%;
-	height: 100%;
-}
-.menu_nav_list li
-{
-	-webkit-transform: translateY(-50px);
-	-moz-transform: translateY(-50px);
-	-ms-transform: translateY(-50px);
-	-o-transform: translateY(-50px);
-	transform: translateY(-50px);
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transition: all 800ms ease;
-	-moz-transition: all 800ms ease;
-	-ms-transition: all 800ms ease;
-	-o-transition: all 800ms ease;
-	transition: all 800ms ease;
-}
-.menu_nav_list li:first-child
-{
-	transition-delay: 400ms;
-}
-.menu_nav_list li:nth-child(2)
-{
-	transition-delay: 500ms;
-}
-.menu_nav_list li:nth-child(3)
-{
-	transition-delay: 600ms;
-}
-.menu_nav_list li:nth-child(4)
-{
-	transition-delay: 700ms;
-}
-.menu_nav_list li:nth-child(5)
-{
-	transition-delay: 800ms;
-}
-.menu_nav_list li:nth-child(6)
-{
-	transition-delay: 900ms;
-}
-.menu_nav_list li:nth-child(7)
-{
-	transition-delay: 1000ms;
-}
-.menu_nav_list li:nth-child(8)
-{
-	transition-delay: 1100ms;
-}
-.menu_nav_list li:nth-child(9)
-{
-	transition-delay: 1200ms;
-}
-.menu.active .menu_nav_list li
-{
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	-ms-transform: translateY(0px);
-	-o-transform: translateY(0px);
-	transform: translateY(0px);
-	visibility: visible;
-	opacity: 1;
-}
-.menu_nav_list li a
-{
-	position: relative;
-	font-size: 40px;
-	color: #FFFFFF;
-	font-weight: 400;
-	line-height: 1.3;
-	-webkit-transition: all 400ms ease;
-	-moz-transition: all 400ms ease;
-	-ms-transition: all 400ms ease;
-	-o-transition: all 400ms ease;
-	transition: all 400ms ease;
-}
-.menu_nav_list li a:hover
-{
-	color: #ff3500;
-}
-.menu_extra
-{
-	position: absolute;
-	left: 0;
-	bottom: 15px;
-	width: 100%;
-}
-.menu_submit
-{
-	display: none;
-	margin-bottom: 20px;
-}
-.menu_submit a
-{
-	white-space: nowrap;
-	line-height: 1.1;
-	font-size: 12px;
-	font-weight: 400;
-	color: #FFFFFF;
-	-webkit-transition: all 200ms ease;
-	-moz-transition: all 200ms ease;
-	-ms-transition: all 200ms ease;
-	-o-transition: all 200ms ease;
-	transition: all 200ms ease;
-}
-.menu_submit a:hover
-{
-	color: #ff3500;
-}
-.menu .social
-{
-	display: none;
-}
-.menu .social ul li:not(:first-child)
-{
-	margin-left: 8px;
-}
 
 /*********************************
 5. Home
@@ -677,16 +397,15 @@ section
 	width: 100%;
 	height: 100%;
 }
-.home_title
-{
-	
-}
+
 .home_title h1
 {
 	font-size: 60px;
 	color: #FFFFFF;
 	font-weight: 700;
 	text-transform: uppercase;
+	-webkit-text-shadow: rgba(0,0,0,.3) 0 0 5px;
+	text-shadow: rgba(0,0,0,.3) 0 0 5px;
 }
 
 /*********************************
@@ -696,8 +415,8 @@ section
 .intro
 {
 	background: #FFFFFF;
-	padding-top: 97px;
-	padding-bottom: 92px;
+	padding-top: 47px;
+	padding-bottom: 42px;
 }
 .intro_text
 {
@@ -713,22 +432,66 @@ section
 	margin-top: 29px;
 }
 
+.book-info ul li:not(:last-of-type)::after
+{
+	display: inline-block;
+	content: '|';
+	font-size: 18px;
+	color: #000000;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.book-info ul li a
+{
+	font-size: 18px;
+	font-weight: 300;
+	color: #000000;
+}
+.book-info ul li a:hover
+{
+	color: #ff3500;
+}
+
+.star svg
+{
+	width: 30px;
+	height: 50px;
+}
+
+.star svg path
+{
+	fill: rgba(0,0,0,0.2);
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+.star:hover svg path
+{
+	fill: #00f800;
+}
+
+.show_fav_icon
+{
+	cursor: pointer;
+}
 /*********************************
 7. Milestones
 *********************************/
 
 .milestones
 {
-	padding-top: 65px;
-	padding-bottom: 112px;
+	padding-top: 20px;
+	padding-bottom: 15px;
 }
 .milestones_row
 {
-	margin-top: 69px;
+	margin-top: 10px;
 }
 .milestones_row > div[class^='col']
 {
-	margin-bottom: 60px;
+	margin-bottom: 10px;
 }
 .milestone
 {
@@ -760,15 +523,14 @@ section
 	font-size: 24px;
 	font-weight: 500;
 	color: #FFFFFF;
-	line-height: 80px;
+	line-height: 40px;
 }
 .milestone_title
 {
 	font-size: 18px;
 	font-weight: 500;
 	color: #FFFFFF;
-	line-height: 0.75;
-	margin-top: 33px;
+	line-height: 40px;
 }
 
 /*********************************
@@ -897,8 +659,8 @@ section
 {
 	display: block;
 	background: #1f2128;
-	padding-top: 48px;
-	padding-bottom: 48px;
+	padding-top: 14px;
+	padding-bottom: 14px;
 }
 .footer .logo
 {
@@ -970,7 +732,6 @@ section
 }
 .latest:not(:last-child)
 {
-	margin-bottom: 36px;
 }
 .latest_play
 {
@@ -1004,9 +765,9 @@ section
 }
 .latest_title
 {
-	font-size: 16px;
+	font-size: 26px;
 	font-weight: 500;
-	color: #FFFFFF;
+	color: #000000;
 	line-height: 1.2;
 	-webkit-transition: all 200ms ease;
 	-moz-transition: all 200ms ease;
@@ -1021,14 +782,14 @@ section
 .latest_episode_info
 {
 	margin-top: 6px;
-	padding-left: 27px;
+	padding-left: 12px;
 }
 .latest_episode_info ul li:not(:last-of-type)::after
 {
 	display: inline-block;
 	content: '|';
 	font-size: 12px;
-	color: #FFFFFF;
+	color: #000000;
 	margin-left: 10px;
 	margin-right: 10px;
 }
@@ -1036,7 +797,7 @@ section
 {
 	font-size: 12px;
 	font-weight: 300;
-	color: #FFFFFF;
+	color: #000000;
 }
 .latest_episode_info ul li a:hover
 {

@@ -238,7 +238,6 @@ section
 }
 .parallax_background
 {
-	background-image: url("../../static/images/about.jpg");
 	min-height: 60px;
 	position: absolute;
 	top: 0;
