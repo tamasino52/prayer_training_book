@@ -1,9 +1,16 @@
 from flask_bootstrap import Bootstrap
-from flask import Flask, render_template, request, redirect, make_response
+from flask import Flask, render_template, make_response, send_from_directory
+import os
 
 app = Flask(__name__, static_folder='static')
 Bootstrap(app)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
+stat_config = {
+    'total_watch': 0,
+    'passed_session': 0,
+    'ongoing_session': 0
+}
 book_list = [
     {
         'id': 0,
@@ -235,15 +242,21 @@ book_list = [
 
 @app.route('/')
 def home():
-    resp = make_response(render_template('about.html', book_list=book_list))
+    resp = make_response(render_template('about.html', book_list=book_list, stat_config=stat_config))
     return resp
 
 
 @app.route('/book/<int:book_id>')
 def book(book_id):
     book_list[book_id]['watch'] += 1
+    stat_config['total_watch'] += 1
     resp = make_response(render_template(book_list[book_id]['context'], book_id=book_id, book_list=book_list))
     return resp
+
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(app.root_path, 'favicon.ico')
 
 
 if __name__ == "__main__":
