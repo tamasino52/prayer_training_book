@@ -4,7 +4,6 @@ import os
 
 app = Flask(__name__, static_folder='static')
 Bootstrap(app)
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 stat_config = {
     'total_watch': 0,
@@ -260,4 +259,4 @@ def favicon():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port=5050)
