@@ -241,12 +241,12 @@ book_list = [
 
 @app.route('/')
 def domain():
+    print(request.host)
     if request.host == 'cvlab.ipdisk.co.kr':
-        redirect(url_for('cvlab.ipdisk.co.kr:250'))
-    elif request.host == '기도훈련집.site':
-        redirect(url_for('www.기도훈련집.site/home'))
-    elif request.host == 'www.기도훈련집.site':
-        redirect(url_for('www.기도훈련집.site/home'))
+        return redirect('http://cvlab.ipdisk.co.kr:250')
+    if request.host == 'www.xn--ok0bv9hm4dy6wd0o.site':
+        return redirect('/home')
+    return
 
 
 @app.route('/home')
