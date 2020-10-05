@@ -11,17 +11,9 @@ stat_config = {
     'ongoing_session': 0
 }
 book_list = [
+
     {
         'id': 0,
-        'title': '하루를 시작하며 드리는 기도',
-        'image': '../static/images/day.jpg',
-        'context': 'context/하루를 시작하며 드리는 기도.html',
-        'mp3': '../static/files/1.mp3',
-        'watch': 0,
-        'update': '2020-09-22'
-    },
-    {
-        'id': 1,
         'title': '나라를 위한 기도',
         'image': '../static/images/city2.jpg',
         'context': 'context/나라를 위한 기도.html',
@@ -30,7 +22,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 2,
+        'id': 1,
         'title': '교회를 위한 기도',
         'image': '../static/images/church2.jpg',
         'context': 'context/교회를 위한 기도.html',
@@ -39,7 +31,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 3,
+        'id': 2,
         'title': '담임목사님을 위한 기도',
         'image': '../static/images/church.jpg',
         'context': 'context/담임목사님을 위한 기도.html',
@@ -48,7 +40,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 4,
+        'id': 3,
         'title': '목장을 위한 기도',
         'image': '../static/images/cross1.jpg',
         'context': 'context/목장을 위한 기도.html',
@@ -57,7 +49,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 5,
+        'id': 4,
         'title': '태신자를 위한 기도',
         'image': '../static/images/cross2.jpg',
         'context': 'context/태신자를 위한 기도.html',
@@ -66,7 +58,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 6,
+        'id': 5,
         'title': '사람을 위한 기도',
         'image': '../static/images/family1.jpg',
         'context': 'context/사람을 위한 기도.html',
@@ -75,7 +67,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 7,
+        'id': 6,
         'title': '가정을 위한 기도',
         'image': '../static/images/family2.jpg',
         'context': 'context/가정을 위한 기도.html',
@@ -84,7 +76,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 8,
+        'id': 7,
         'title': '남편을 위한 기도',
         'image': '../static/images/blog.jpg',
         'context': 'context/남편을 위한 기도.html',
@@ -93,7 +85,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 9,
+        'id': 8,
         'title': '아내를 위한 기도',
         'image': '../static/images/episode.jpg',
         'context': 'context/아내를 위한 기도.html',
@@ -102,7 +94,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 10,
+        'id': 9,
         'title': '부모를 위한 기도',
         'image': '../static/images/contact.jpg',
         'context': 'context/부모를 위한 기도.html',
@@ -111,7 +103,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 11,
+        'id': 10,
         'title': '자녀를 위한 기도',
         'image': '../static/images/family2.jpg',
         'context': 'context/자녀를 위한 기도.html',
@@ -120,7 +112,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 12,
+        'id': 11,
         'title': '개인기도 1',
         'image': '../static/images/forest.jpg',
         'context': 'context/개인기도 1.html',
@@ -129,7 +121,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 13,
+        'id': 12,
         'title': '개인기도 2',
         'image': '../static/images/cloud.jpg',
         'context': 'context/개인기도 2.html',
@@ -138,7 +130,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 14,
+        'id': 13,
         'title': '회개기도',
         'image': '../static/images/blue.jpg',
         'context': 'context/회개기도.html',
@@ -147,7 +139,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 15,
+        'id': 14,
         'title': '영적인 힘을 얻기 위한 기도',
         'image': '../static/images/city3.jpg',
         'context': 'context/영적인 힘을 얻기 위한 기도.html',
@@ -156,7 +148,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 16,
+        'id': 15,
         'title': '시험이 있을 때 드리는 기도',
         'image': '../static/images/blue.jpg',
         'context': 'context/시험이 있을 때 드리는 기도.html',
@@ -165,7 +157,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 17,
+        'id': 16,
         'title': '기도가 잘 되지 않을 때 드리는 기도',
         'image': '../static/images/cross4.jpg',
         'context': 'context/기도가 잘 되지 않을 때 드리는 기도.html',
@@ -174,7 +166,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 18,
+        'id': 17,
         'title': '삶에 지칠 때 드리는 기도',
         'image': '../static/images/cross3.jpg',
         'context': 'context/삶에 지칠 때 드리는 기도.html',
@@ -183,7 +175,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 19,
+        'id': 18,
         'title': '감사할 때 드리는 기도',
         'image': '../static/images/day.jpg',
         'context': 'context/감사할 때 드리는 기도.html',
@@ -192,7 +184,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 20,
+        'id': 19,
         'title': '몸이 아플 때 드리는 기도',
         'image': '../static/images/blue.jpg',
         'context': 'context/몸이 아플 때 드리는 기도.html',
@@ -201,7 +193,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 21,
+        'id': 20,
         'title': '부부간에 불화가 있을 때 드리는 기도',
         'image': '../static/images/wave.jpg',
         'context': 'context/부부간에 불화가 있을 때 드리는 기도.html',
@@ -210,7 +202,7 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 22,
+        'id': 21,
         'title': '물질적인 어려움에 있을 때 드리는 기도',
         'image': '../static/images/wave2.jpg',
         'context': 'context/물질적인 어려움에 있을 때 드리는 기도.html',
@@ -219,10 +211,19 @@ book_list = [
         'update': '2020-09-22'
     },
     {
-        'id': 23,
+        'id': 22,
         'title': '사업을 위한 기도',
         'image': '../static/images/business.jpg',
         'context': 'context/사업을 위한 기도.html',
+        'mp3': '../static/files/1.mp3',
+        'watch': 0,
+        'update': '2020-09-22'
+    },
+    {
+        'id': 23,
+        'title': '하루를 시작하며 드리는 기도',
+        'image': '../static/images/day.jpg',
+        'context': 'context/하루를 시작하며 드리는 기도.html',
         'mp3': '../static/files/1.mp3',
         'watch': 0,
         'update': '2020-09-22'
@@ -241,7 +242,6 @@ book_list = [
 
 @app.route('/')
 def domain():
-    print(request.host)
     if request.host == 'cvlab.ipdisk.co.kr':
         return redirect('http://cvlab.ipdisk.co.kr:250')
     if request.host == 'www.xn--ok0bv9hm4dy6wd0o.site':

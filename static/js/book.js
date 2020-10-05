@@ -164,7 +164,7 @@ $(document).ready(function()
 				keyEnabled: true,
 				solution: 'html',
 				preload: 'metadata',
-				volume: 0.5,
+				volume: 1,
 				muted: false,
 				backgroundColor: '#000000',
 				errorAlerts: false,
