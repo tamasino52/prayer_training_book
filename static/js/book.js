@@ -145,9 +145,9 @@ $(document).ready(function()
 			$("#jplayer_1").jPlayer({
 				ready: function () {
 					$(this).jPlayer("setMedia", {
-						title:"Better Days",
-							artist:"Bensound",
-							mp3:"../static/files/2.mp3"
+						title:"기도훈련집",
+						artist:"오병이어교회",
+						mp3: $("#jplayer_1").attr("value")
 					});
 				},
 				play: function() { // To avoid multiple jPlayers playing together.
