@@ -1,5 +1,5 @@
 from flask_bootstrap import Bootstrap
-from flask import Flask, render_template, make_response, send_from_directory
+from flask import Flask, render_template, make_response, send_from_directory, request, redirect, url_for
 import os
 
 app = Flask(__name__, static_folder='static')
@@ -240,6 +240,16 @@ book_list = [
 
 
 @app.route('/')
+def domain():
+    if request.host == 'cvlab.ipdisk.co.kr':
+        redirect(url_for('cvlab.ipdisk.co.kr:250'))
+    elif request.host == '기도훈련집.site':
+        redirect(url_for('www.기도훈련집.site/home'))
+    elif request.host == 'www.기도훈련집.site':
+        redirect(url_for('www.기도훈련집.site/home'))
+
+
+@app.route('/home')
 def home():
     resp = make_response(render_template('about.html', book_list=book_list, stat_config=stat_config))
     return resp
