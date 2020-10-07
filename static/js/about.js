@@ -6,9 +6,6 @@
 
 1. Vars and Inits
 2. Set Header
-3. Init Menu
-4. Init Milestones
-5. Init Gallery
 
 
 ******************************/
@@ -17,18 +14,14 @@ $(document).ready(function()
 {
 	"use strict";
 
-	/* 
-
+	/*
 	1. Vars and Inits
-
 	*/
 
 	var ctrl = new ScrollMagic.Controller();
 
 	setHeader();
-	initMenu();
 	initMilestones();
-	initGallery();
 
 	$(window).on('resize', function()
 	{

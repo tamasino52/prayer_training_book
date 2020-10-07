@@ -2,10 +2,12 @@
 <html lang="ko">
 <head>
 <title>{{ book_list[book_id]['title'] }}</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="기도훈련집">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="기도훈련집, 기도문, 오병이어교회">
+<meta name="description" content="오병이어교회 기도훈련집">
+<meta name="author" content="오병이어교회">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../static/styles/bootstrap-4.1.2/bootstrap.min.css">
 <link href="../static/plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="../static/styles/book.css">
@@ -26,7 +28,7 @@
                         </h1>
                     </div>
                     <div class="home_subtitle">
-                        이 기도문으로 {{ book_list[book_id]['watch'] }}번의 기도가 쌓였습니다
+                        조회수 {{ book_list[book_id]['watch'] }}회
                     </div>
                 </div>
 		    </div>

@@ -2,89 +2,70 @@
 <html lang="ko">
 <head>
 <title>기도훈련집</title>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="기도훈련집">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="기도훈련집, 기도문, 오병이어교회">
+<meta name="description" content="오병이어교회 기도훈련집">
+<meta name="author" content="오병이어교회">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="../static/styles/bootstrap-4.1.2/bootstrap.min.css">
-<link href="../static/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-<link href="../static/plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+<link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css'>
 <link rel="stylesheet" type="text/css" href="../static/styles/about.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/about_responsive.css">
+
 </head>
 <body>
 
 <div class="super_container">
 
-	<!-- Home -->
-	<div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" style="background-image: url('../static/images/sky.jpg');" data-speed="0.3"></div>
-		<div class="home_container d-flex flex-column align-items-center justify-content-center">
-			<div class="home_content">
-                <div class="text-left font-weight-bold text-white">BETA</div>
-				<div class="home_title"><h1>기도훈련집</h1></div>
-			</div>
+	<!-- Header -->
+	<div class="header-container">
+		<div class="header-background parallax_background parallax-window" data-parallax="scroll" data-speed="0.3"></div>
+		<div class="fill_all center-all">
+            <div class="header weight-1 d-flex align-items-end">
+                <div class="head-1">기도훈련집</div>
+                <div class="head-6 header-version">BETA 1.4</div>
+            </div>
+
 		</div>
 	</div>
 
-	<!-- Milestones -->
-
-	<div class="milestones">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="../static/images/milestones.jpg" data-speed="0.3"></div>
-		<div class="container">
-			<div class="row milestones_row">
-
-				<!-- Milestone -->
-				<div class="col-12">
-					<div class="milestone text-center">
-						<div class="milestone_content ml-auto mr-auto">
-                            <div class="milestone_title">기도생활 성공하면 신앙생활 성공하고<br>신앙생활 성공하면 인생도 성공한다</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
+	<!-- Subheader -->
+	<div class="subheader-container">
+		<div class="subheader-background parallax_background parallax-window" data-parallax="scroll" data-speed="0.3"></div>
+        <div class="fill_all subheader center-all body-3 weight-2 text-center">
+            기도생활 성공하면 신앙생활 성공하고<br>신앙생활 성공하면 인생도 성공한다
 		</div>
 	</div>
 
 	<!-- Intro -->
-	<div class="intro">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="intro_content">
-                        {% for book in book_list %}
-                        <!-- List -->
-						<div class="latest d-flex flex-row">
-                            <div class="latest_title_container flex-column">
-								<a href="book/{{ book["id"] }}">
-									<div class="d-flex flex-row">
-										<div class="latest_title_content">
-											<div class="latest_title">{{ book["title"] }}</div>
-										</div>
-									</div>
-                                </a>
-                                <div class="latest_episode_info">
-                                    <ul class="d-flex flex-row">
-                                        <li>{{ book['update'] }}</li>
-                                        <li>조회수 {{ book['watch'] }}회</li>
-                                    </ul>
-                                </div>
-							</div>
-						</div>
-                        <hr>
-                        {% endfor %}
-					</div>
-				</div>
-			</div>
-		</div>
+	<div class="context-container d-flex flex-column">
+        {% for book in book_list %}
+        <!-- List -->
+        <div class="context d-flex flex-column">
+            <a href="book/{{ book["id"] }}">
+                <div class="context-title head-3 weight-2">{{ book["title"] }}</div>
+            </a>
+            <div class="context-info body-5 weight-2">
+                <ul class="d-flex flex-row">
+                    <li>{{ book['id'] + 1 }}번</li>
+                    <li>{{ book['update'] }}</li>
+                    <li>조회수 {{ book['watch'] }}회</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        {% endfor %}
 	</div>
 
 	<!-- Footer -->
-	<footer class="footer">
-		<div class="container text-white">
+	<footer class="footer-container">
+		<div class="footer body-7">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All Rights Reserved. <a href="https://52ch.kr/" target="_blank">오병이어교회.</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script>
+            All Rights Reserved.
+            <a href="https://52ch.kr/" target="_blank">오병이어교회.</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 		</div>
 	</footer>
 </div>
@@ -97,7 +78,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All R
 <script src="../static/plugins/scrollmagic/ScrollMagic.min.js"></script>
 <script src="../static/plugins/greensock/animation.gsap.min.js"></script>
 <script src="../static/plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="../static/plugins/colorbox/jquery.colorbox-min.js"></script>
 <script src="../static/plugins/easing/easing.js"></script>
 <script src="../static/plugins/progressbar/progressbar.min.js"></script>
 <script src="../static/plugins/parallax-js-master/parallax.min.js"></script>
