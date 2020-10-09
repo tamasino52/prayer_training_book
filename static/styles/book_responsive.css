@@ -27,10 +27,7 @@
 
 @media only screen and (max-width: 1600px)
 {
-	.header_content
-	{
-		padding-left: 200px;
-	}
+
 }
 
 /************
@@ -39,7 +36,11 @@
 
 @media only screen and (max-width: 1440px)
 {
-	
+	.context-container, .footer-container
+	{
+		padding-left: 25%;
+		padding-right: 25%;
+	}
 }
 
 /************
@@ -48,7 +49,7 @@
 
 @media only screen and (max-width: 1380px)
 {
-	
+
 }
 
 /************
@@ -57,7 +58,7 @@
 
 @media only screen and (max-width: 1280px)
 {
-	
+
 }
 
 /************
@@ -66,13 +67,10 @@
 
 @media only screen and (max-width: 1199px)
 {
-	.main_nav
+	.context-container, .footer-container
 	{
-		display: none;
-	}
-	.sidebar
-	{
-		margin-top: 8px;
+		padding-left: 20%;
+		padding-right: 20%;
 	}
 }
 
@@ -82,7 +80,7 @@
 
 @media only screen and (max-width: 1100px)
 {
-	
+
 }
 
 /************
@@ -91,7 +89,11 @@
 
 @media only screen and (max-width: 1024px)
 {
-	
+	.context-container, .footer-container
+	{
+		padding-left: 15%;
+		padding-right: 15%;
+	}
 }
 
 /************
@@ -100,42 +102,7 @@
 
 @media only screen and (max-width: 991px)
 {
-	.submit
-	{
-		display: none;
-	}
-	.menu_submit
-	{
-		display: block;
-	}
-	.episode_image_container
-	{
-		position: relative;
-		top: auto;
-		left: auto;
-		width: 100%;
-	}
-	.episode_image
-	{
-		width: 100%;
-		margin-top: 0px;
-	}
-	.sidebar
-	{
-		margin-top: 0;
-	}
-	.episode_col
-	{
-		margin-top: 53px;
-	}
-	.sidebar_col
-	{
-		margin-top: 100px;
-	}
-	.footer_content_row > div[class^='col']:not(:last-child)
-	{
-		margin-bottom: 80px;
-	}
+
 }
 
 /************
@@ -144,7 +111,7 @@
 
 @media only screen and (max-width: 959px)
 {
-	
+
 }
 
 /************
@@ -153,7 +120,11 @@
 
 @media only screen and (max-width: 880px)
 {
-	
+	.context-container, .footer-container
+	{
+		padding-left: 10%;
+		padding-right: 10%;
+	}
 }
 
 /************
@@ -162,7 +133,7 @@
 
 @media only screen and (max-width: 768px)
 {
-	
+
 }
 
 /************
@@ -171,36 +142,7 @@
 
 @media only screen and (max-width: 767px)
 {
-	.episode_name a
-	{
-		font-size: 16px;
-	}
-	.episode_date
-	{
-		margin-top: 4px;
-	}
-	.episode_date a
-	{
-		font-size: 12px;
-		font-weight: 400;
-	}
-	.single_player
-	{
-		height: auto;
-	}
-	.episode_image
-	{
-		width: 150px;
-	}
-	.episode_content
-	{
-		padding-left: 25px;
-		padding-right: 25px;
-	}
-	.comment_form > div:first-child > div:first-child
-	{
-		margin-bottom: 30px;
-	}
+
 }
 
 /************
@@ -209,67 +151,17 @@
 
 @media only screen and (max-width: 575px)
 {
-	.logo
+	.header-container
 	{
-		left: 15px;
-		height: 41px;
+		height: 280px;
 	}
-	.logo a
-	{
-		font-size: 24px;
+	.subheader-container {
+		height: auto;
 	}
-	.social
+	.context-container, .footer-container
 	{
-		display: none;
-	}
-	.hamburger i
-	{
-		font-size: 28px;
-	}
-	.header_content
-	{
-		height: 70px;
-	}
-	.menu_nav_list li a
-	{
-		font-size: 36px;
-	}
-	.menu .social
-	{
-		display: block;
-	}
-
-	.home_title h1
-	{
-		font-size: 36px;
-	}
-	.button_fill,
-	.button_border
-	{
-		height: 38px;
-	}
-	.button_border a
-	{
-		font-size: 12px;
-		line-height: 36px;
-	}
-	.button_fill a
-	{
-		font-size: 12px;
-		line-height: 38px;
-	}
-	.season_links ul li
-	{
-		font-size: 14px;
-	}
-	.sidebar_list ul li a
-	{
-		font-size: 14px;
-	}
-	.comment_button
-	{
-		width: 121px;
-		font-size: 12px;
+		padding-left: 5%;
+		padding-right: 5%;
 	}
 }
 
@@ -279,7 +171,7 @@
 
 @media only screen and (max-width: 539px)
 {
-	
+
 }
 
 /************
@@ -288,7 +180,38 @@
 
 @media only screen and (max-width: 480px)
 {
-	
+	:root
+	{
+		/* Header Font Size */
+		--head-1: 30pt;
+		--head-2: 25pt;
+		--head-3: 18pt;
+		--head-4: 16pt;
+		--head-5: 14pt;
+		--head-6: 12pt;
+		--head-7: 10pt;
+
+		/* Context Font Size */
+		--body-1: 20pt;
+		--body-2: 18pt;
+		--body-3: 15pt;
+		--body-4: 14pt;
+		--body-5: 12pt;
+		--body-6: 10pt;
+		--body-7: 9pt;
+		--body-8: 7pt;
+	}
+
+	.header-container
+	{
+		height: 200px;
+	}
+	.header-version
+	{
+		height: content-box;
+		margin-bottom: 8px;
+	}
+
 }
 
 /************
@@ -297,7 +220,7 @@
 
 @media only screen and (max-width: 479px)
 {
-	
+
 }
 
 /************
@@ -306,5 +229,5 @@
 
 @media only screen and (max-width: 400px)
 {
-	
+
 }

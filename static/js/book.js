@@ -6,11 +6,8 @@
 
 1. Vars and Inits
 2. Set Header
-3. Init Menu
-4. Init Favs
 5. Init SVG
 6. Init Single Player
-7. Init Gallery
 
 
 ******************************/
@@ -28,7 +25,6 @@ $(document).ready(function()
 	var ctrl = new ScrollMagic.Controller();
 
 	setHeader();
-	initFavs();
 	initSvg();
 	initSinglePlayer();
 
@@ -56,40 +52,11 @@ $(document).ready(function()
 	function setHeader()
 	{
 		var height = $(window).scrollTop();
-		$('.home').css("height", (490-height).toString()+"px")
-		$('.home_container').css("top", (-height).toString()+"px")
+		$('.header-container').css("height", (490-height).toString()+"px")
+		$('.header').css("top", (-height).toString()+"px")
 
 	}
 
-
-	/* 
-
-	4. Init Favs
-
-	*/
-
-	function initFavs()
-	{
-		if($('.show_fav_icon').length)
-		{
-			var icons = $('.show_fav_icon');
-			icons.each(function()
-			{
-				var icon = $(this);
-				icon.on('click', function()
-				{
-					if(icon.hasClass('active'))
-					{
-						icon.removeClass('active');
-					}
-					else
-					{
-						icon.addClass('active');
-					}
-				});
-			});
-		}
-	}
 
 	/* 
 

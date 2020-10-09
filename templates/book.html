@@ -3,13 +3,12 @@
 <head>
 <title>{{ book_list[book_id]['title'] }}</title>
 <meta charset="UTF-8">
-<meta name="keywords" content="기도훈련집, 기도문, 오병이어교회">
-<meta name="description" content="오병이어교회 기도훈련집">
+<meta name="keywords" content="기도훈련집, 기도문, 오병이어교회, {{ book_list[book_id]['title'] }}">
+<meta name="description" content="오병이어교회 기도훈련집 {{ book_list[book_id]['title'] }}">
 <meta name="author" content="오병이어교회">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="../static/styles/bootstrap-4.1.2/bootstrap.min.css">
-<link href="../static/plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css">
+<link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css'>
 <link rel="stylesheet" type="text/css" href="../static/styles/book.css">
 <link rel="stylesheet" type="text/css" href="../static/styles/book_responsive.css">
 </head>
@@ -18,29 +17,23 @@
 <div class="super_container">
 
 	<!-- Home -->
-	<div class="home trans_200">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-speed="0.8" style="background-image: url({{ book_list[book_id]['image'] }});">
-            <div class="home_container trans_200">
-                <div class="text-center">
-                    <div class="home_title">
-                        <h1>
-                            {{ book_list[book_id]['title'] }}
-                        </h1>
-                    </div>
-                    <div class="home_subtitle">
-                        조회수 {{ book_list[book_id]['watch'] }}회
-                    </div>
-                </div>
-		    </div>
+	<div class="header-container">
+		<div class="header-background parallax_background parallax-window" data-parallax="scroll" data-speed="0.3"
+             style="background-image: url({{ book_list[book_id]['image'] }});"></div>
+        <div class="header fill_all center-all d-flex flex-column">
+            <div class="header-title head-1 weight-1">
+                {{ book_list[book_id]['title'] }}
+            </div>
+            <div class="header-subtitle body-2 weight-2">
+                {{ book_id + 1 }}번 | 조회수 {{ book_list[book_id]['watch'] }}회
+            </div>
         </div>
 
-		<div class="home_player_container">
+		<div class="player_container">
 			<div class="container">
 				<div class="row">
-					<!-- Episode -->
-                    <div class="player d-flex flex-row align-items-start justify-content-start s1">
+                    <div class="player d-flex flex-row align-items-start justify-content-start">
                         <div class="player_content">
-
                             <!-- Player -->
                             <div class="single_player_container">
                                 <div class="single_player d-flex flex-row align-items-center justify-content-start">
@@ -81,81 +74,124 @@
 		</div>
 	</div>
 
-	<!-- Episode -->
+	<!-- Context -->
+	<div class="context-container">
 
-	<div class="episode_container">
-		<div class="container">
-            <!-- Episode -->
-            <div class="episode_col">
-                <div class="intro">
-                    <div class="context">
-                        {% block context %}
-                        {% endblock %}
+        <!-- 이전, 목록, 다음 -->
+        <div class="btn-container d-flex justify-content-between align-self-center">
+            {% if book_id > 0 %}
+                <a href="{{ book_id - 1 }}">
+                    <div class="move-btn icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" height="100%" width="100%"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+                    </div>
+                </a>
+            {% else %}
+                <a href="{{ book_list.__len__() - 1 }}">
+                    <div class="move-btn icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" height="100%" width="100%"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+                    </div>
+                </a>
+            {% endif %}
+            <a href="/home"><div class="list-btn icon head-5 weight-1 accent-shadow">목록으로</div></a>
+
+            {% if book_id < book_list.__len__() - 1 %}
+                <a href="{{ book_id + 1 }}">
+                    <div class="move-btn icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" height="100%" width="100%"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
+                    </div>
+                </a>
+            {% else %}
+                <a href="0">
+                    <div class="move-btn icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" height="100%" width="100%"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
+                    </div>
+                </a>
+            {% endif %}
+        </div>
+
+        <div class="context body-4 weight-2">
+            {% block context %}
+            {% endblock %}
+        </div>
+
+        <!-- 이전, 목록, 다음 -->
+        <div class="btn-container d-flex justify-content-between align-self-center">
+            {% if book_id > 0 %}
+                <a href="{{ book_id - 1 }}">
+                    <div class="move-btn icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" height="100%" width="100%"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+                    </div>
+                </a>
+            {% else %}
+                <a href="{{ book_list.__len__() - 1 }}">
+                    <div class="move-btn icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" height="100%" width="100%"><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+                    </div>
+                </a>
+            {% endif %}
+            <a href="/home"><div class="list-btn icon head-5 weight-1 accent-shadow">목록으로</div></a>
+
+            {% if book_id < book_list.__len__() - 1 %}
+                <a href="{{ book_id + 1 }}">
+                    <div class="move-btn icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" height="100%" width="100%"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
+                    </div>
+                </a>
+            {% else %}
+                <a href="0">
+                    <div class="move-btn icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" height="100%" width="100%"><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg>
+                    </div>
+                </a>
+            {% endif %}
+        </div>
+
+
+	</div>
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer-container d-flex flex-column">
+            <!-- Other Episodes -->
+            <div class="footer-title head-2 weight-1">
+                다른 기도문
+            </div>
+
+            <div class="footer-context">
+                {% for book in book_list[book_id - 2:book_id] + book_list[book_id + 1:book_id + 3] %}
+                <!-- Other 1 -->
+                <div class="footer-context-element d-flex flex-column">
+                    <div class="footer-context-title">
+                        <a href="{{ book['id'] }}">
+                            <div class="d-flex flex-row align-items-start justify-content-start">
+                                <div class="footer-context-icon">
+                                    <div class="icon icon-small"><img class="svg" src="../static/images/bookmark.svg"></div>
+                                </div>
+                                <div class="footer-context-title head-3 accent-shadow">
+                                    {{ book['title'] }}
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="footer-context-info">
+                        <ul class="d-flex flex-row">
+                            <li>{{ book['update'] }}</li>
+                            <li>조회수 {{ book['watch'] }}회</li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-		</div>
-	</div>
-
-	<!-- Footer -->
-	<footer class="footer">
-		<div class="container">
-            <!-- 이전, 목록, 다음 -->
-            <div class="btn-container d-flex justify-content-between align-self-center">
-                {% if book_id > 0 %}
-                    <a href="{{ book_id - 1 }}"><div class="show_fav_icon"><img class="svg icon-middle" src="../static/images/angle-left.svg"> 이전</div></a>
-                {% else %}
-                    <a href="{{ book_list.__len__() - 1 }}"><div class="show_fav_icon"><img class="svg icon-middle" src="../static/images/angle-double-left.svg"> 마지막으로</div></a>
-                {% endif %}
-                <a href="/"><div id="list-btn" class="show_fav_icon">목록으로</div></a>
-
-                {% if book_id < book_list.__len__() - 1 %}
-                    <a href="{{ book_id + 1 }}"><div class="show_fav_icon">다음 <img class="svg icon-middle" src="../static/images/angle-right.svg"></div></a>
-                {% else %}
-                    <a href="0"><div class="show_fav_icon">처음으로 <img class="svg icon-middle" src="../static/images/angle-double-right.svg"></div></a>
-                {% endif %}
+                {% endfor %}
             </div>
 
-			<div class="row footer_content_row">
-				<!-- Other Episodes -->
-				<div class="col-lg-12">
-					<div class="footer_title">
-                        <h2>다른 기도문</h2>
-                    </div>
-					<div class="latest_container">
-
-                        {% for book in book_list[book_id - 2:book_id] + book_list[book_id + 1:book_id + 3] %}
-						<!-- Other 1 -->
-						<div class="latest">
-							<div class="latest_title_container d-flex flex-row align-items-start justify-content-start">
-								<a href="{{ book['id'] }}">
-									<div class="d-flex flex-row align-items-start justify-content-start">
-										<div class="latest_play">
-											<div class="show_fav_icon icon-small"><img class="svg" src="../static/images/bookmark.svg"></div>
-										</div>
-										<div class="latest_title_content ml-2">
-											<div class="latest_title">{{ book['title'] }}</div>
-										</div>
-									</div>
-								</a>
-							</div>
-							<div class="latest_episode_info ml-2">
-								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li><a href="{{ book['id'] }}">{{ book['update'] }}</a></li>
-									<li><a href="{{ book['id'] }}">조회수 {{ book['watch'] }}회</a></li>
-								</ul>
-							</div>
-						</div>
-                        {% endfor %}
-					</div>
-				</div>
-			</div>
-</br></br><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All Rights Reserved. <a href="https://52ch.kr/" target="_blank">오병이어교회.</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-
-		</div>
-	</footer>
+            <div class="footer-copyright body-7">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>document.write(new Date().getFullYear());</script>
+                All Rights Reserved.
+                <a href="https://52ch.kr/" target="_blank">오병이어교회.</a>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="../static/js/jquery-3.3.1.min.js"></script>
@@ -166,7 +202,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All R
 <script src="../static/plugins/scrollmagic/ScrollMagic.min.js"></script>
 <script src="../static/plugins/greensock/animation.gsap.min.js"></script>
 <script src="../static/plugins/greensock/ScrollToPlugin.min.js"></script>
-<script src="../static/plugins/colorbox/jquery.colorbox-min.js"></script>
 <script src="../static/plugins/jPlayer/jquery.jplayer.min.js"></script>
 <script src="../static/plugins/jPlayer/jplayer.playlist.min.js"></script>
 <script src="../static/plugins/easing/easing.js"></script>

@@ -251,7 +251,7 @@ def domain():
 
 @app.route('/home')
 def home():
-    resp = make_response(render_template('about.html', book_list=book_list, stat_config=stat_config))
+    resp = make_response(render_template('home.html', book_list=book_list, stat_config=stat_config))
     return resp
 
 
