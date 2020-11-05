@@ -242,12 +242,8 @@ book_list = [
 
 @app.route('/')
 def domain():
-    if request.host == 'cvlab.ipdisk.co.kr':
-        return redirect('http://cvlab.ipdisk.co.kr:250')
-    if request.host == 'www.xn--ok0bv9hm4dy6wd0o.site':
-        return redirect('/home')
-    return
-
+    return redirect('/home')
+    
 
 @app.route('/home')
 def home():
