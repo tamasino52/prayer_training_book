@@ -183,8 +183,8 @@
 	:root
 	{
 		/* Header Font Size */
-		--head-1: 30pt;
-		--head-2: 25pt;
+		--head-1: 25pt;
+		--head-2: 21pt;
 		--head-3: 18pt;
 		--head-4: 16pt;
 		--head-5: 14pt;

@@ -92,7 +92,7 @@
                     </div>
                 </a>
             {% endif %}
-            <a href="/home"><div class="list-btn icon head-5 weight-1 accent-shadow">목록으로</div></a>
+            <a href="/home"><div class="list-btn icon head-4 weight-1 accent-shadow">목록으로</div></a>
 
             {% if book_id < book_list.__len__() - 1 %}
                 <a href="{{ book_id + 1 }}">
@@ -109,7 +109,7 @@
             {% endif %}
         </div>
 
-        <div class="context body-4 weight-2">
+        <div class="context body-3 weight-2">
             {% block context %}
             {% endblock %}
         </div>
@@ -129,7 +129,7 @@
                     </div>
                 </a>
             {% endif %}
-            <a href="/home"><div class="list-btn icon head-5 weight-1 accent-shadow">목록으로</div></a>
+            <a href="/home"><div class="list-btn icon head-4 weight-1 accent-shadow">목록으로</div></a>
 
             {% if book_id < book_list.__len__() - 1 %}
                 <a href="{{ book_id + 1 }}">

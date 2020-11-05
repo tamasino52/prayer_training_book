@@ -51,12 +51,12 @@
 	/* Context Font Size */
 	--body-1: 24pt;
 	--body-2: 20pt;
-	--body-3: 16pt;
-	--body-4: 14pt;
-	--body-5: 12pt;
-	--body-6: 10pt;
-	--body-7: 9pt;
-	--body-8: 7pt;
+	--body-3: 17pt;
+	--body-4: 16pt;
+	--body-5: 14pt;
+	--body-6: 12pt;
+	--body-7: 10pt;
+	--body-8: 8pt;
 }
 
 /*********************************
@@ -303,6 +303,8 @@ img
 .header-container
 {
 	height: 346px;
+	background-image: url('../images/sky.jpg');
+	background-size: cover;
 }
 .header-background
 {
@@ -329,10 +331,9 @@ img
 .subheader-container
 {
 	height: auto;
-}
-.subheader-background
-{
 	background-image: url('../images/books.jpg');
+	background-size: cover;
+
 }
 .subheader *, .subheader
 {
