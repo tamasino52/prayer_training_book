@@ -12,7 +12,7 @@ book_list = [
         'title': '나라를 위한 기도',
         'image': '../static/images/city2.jpg',
         'context': 'context/나라를 위한 기도.html',
-        'mp3': '../static/files/나라를+위한+기도_audio',
+        'mp3': '../static/files/나라를+위한+기도_audio.mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -266,6 +266,11 @@ def book(book_id):
 
     resp = make_response(render_template(book_list[book_id]['context'], book_id=book_id, book_list=book_list))
     return resp
+
+
+@app.route('/information')
+def information():
+    return make_response(render_template('information.html'))
 
 
 @app.route('/favicon.ico')

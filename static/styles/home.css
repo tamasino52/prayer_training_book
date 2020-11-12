@@ -349,6 +349,12 @@ img
 5. Context
 *********************************/
 
+.book-header
+{
+	color: var(--accent-color);
+	padding-bottom: 0px;
+	padding-top: 20px;
+}
 .context-container
 {
 	background: var(--background-color);
@@ -379,6 +385,36 @@ img
 	color: var(--gray-text-color);
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+/*********************************
+6. SubFooter
+*********************************/
+
+.subfooter ul li:not(:last-of-type)::after
+{
+	display: inline-block;
+	content: ' | ';
+	color: var(--gray-text-color);
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.subfooter-container
+{
+	height: auto;
+	background-image: url('../images/books.jpg');
+	background-size: cover;
+
+}
+.subfooter *, .subfooter
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: var(--footer-text-color);
+	-webkit-text-shadow: var(--dark-shadow-color) 0 0 2px;
+	text-shadow: var(--dark-shadow-color) 0 0 2px;
+	line-height: 1.4;
 }
 
 /*********************************

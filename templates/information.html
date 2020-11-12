@@ -11,6 +11,7 @@
 <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css'>
 <link rel="stylesheet" type="text/css" href="../static/styles/home.css">
 <link rel="stylesheet" type="text/css" href="../static/styles/home_responsive.css">
+<script src="https://kit.fontawesome.com/b843fa0459.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -22,51 +23,69 @@
 		<div class="fill_all center-all">
             <div class="header weight-1 d-flex align-items-end">
                 <div class="head-1"><a href="/home">기도훈련집</a></div>
-                <div class="head-6 header-version">BETA 2.1</div>
             </div>
 
 		</div>
 	</div>
 
 	<!-- Subheader -->
-	<div class="subheader-container">
-        <div class="fill_all subheader center-all body-3 weight-2 text-center">
-            기도생활 성공하면 신앙생활 성공하고<br>신앙생활 성공하면 인생도 성공한다
-		</div>
+	<div class="subfooter-container">
+        <div class="fill_all subfooter center-all body-3 weight-2 text-center">
+            <ul class="d-flex flex-row">
+                <li><a href="/home">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#license">License</a></li>
+                <li><a href="#location">Location</a></li>
+            </ul>
+        </div>
 	</div>
 
-	<!-- Intro -->
 	<div class="context-container d-flex flex-column">
-        <div class="book-header head-2 weight-1">기도훈련집1</div>
-        <hr>
-        {% for book in book_list %}
-        <!-- List -->
-        <div class="context d-flex flex-column">
-            <a href="book/{{ book["id"] }}">
-                <div class="context-title head-3 weight-2">{{ book["title"] }}</div>
-            </a>
-            <div class="context-info body-5 weight-2">
-                <ul class="d-flex flex-row">
-                    <li>{{ book['id'] + 1 }}번</li>
-                    <li>{{ book['update'] }}</li>
-                    <li>조회수 {{ book['watch'] }}회</li>
-                </ul>
+        <!-- Contact -->
+        <div id="contact" class="book-header head-2 weight-1">CONTACT</div>
+        <div class="d-flex flex-column">
+            <div class="body-5 weight-2">
+                <i class="fas fa-phone-square-alt"></i> 010-7193-5820<br>
+                <i class="fas fa-envelope-square"></i> tkdzma8080@naver.com<br>
+                <i class="fab fa-github-square"></i>
+                <a href="https://github.com/tamasino52/prayer_training_book">tamasino52</a>
+                <br>
             </div>
         </div>
         <hr>
-        {% endfor %}
-	</div>
 
-    <!-- Subfooter -->
-    <div class="subfooter-container">
-        <div class="fill_all subfooter center-all body-6 weight-2 text-center">
-            <ul class="d-flex flex-row">
-                <li><a href="/information#contact">Contact</a></li>
-                <li><a href="/information#license">License</a></li>
-                <li><a href="/information#location">Location</a></li>
-            </ul>
+        <!-- License -->
+        <div id="license" class="book-header head-2 weight-1">LICENSE</div>
+        <div class="d-flex flex-column">
+            <div class="body-6 weight-2">
+                <pre>
+본 서비스의 나레이션에 사용된 목소리는 클로바더빙으로 제작한 AI 보이스 입니다.
+서비스에 사용된 도서의 저작권은 오병이어교회 52출판사에 있습니다.
+출판물 구매를 희망하시는 분은 52출판사를 방문해주시기 바랍니다.
+
+회사명 52출판사 주소 경기도 광명시 소하로 144
+사업자 등록번호 140-90-03679 대표 권영구
+은행 농협 351-0714-4608-23
+오병이어교회 팩스 02-899-9189
+통신판매업신고번호 개인정보 보호책임자 정충상
+
+본 서비스는 그리스도의 뜻에 따라 비영리적인 목적으로 개설되었으며 어떠한 수익도 창출하지 않습니다.
+                </pre>
+            </div>
         </div>
-    </div>
+        <hr>
+
+        <!-- Location -->
+        <div id="location" class="book-header head-2 weight-1">LOCATION</div>
+        <div class="d-flex flex-column">
+            <div class="body-6 weight-2">
+                <pre>
+오병이어교회 / 경기도 광명시 소하로 144 / 02-899-9185-6
+                </pre>
+            </div>
+        </div>
+        <hr>
+	</div>
 
 	<!-- Footer -->
 	<footer class="footer-container">

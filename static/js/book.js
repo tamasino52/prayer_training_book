@@ -16,7 +16,7 @@ $(document).ready(function()
 {
 	"use strict";
 
-	/* 
+	/*
 
 	1. Vars and Inits
 
@@ -52,7 +52,9 @@ $(document).ready(function()
 	function setHeader()
 	{
 		var height = $(window).scrollTop();
-		$('.header-container').css("height", (490-height).toString()+"px")
+
+		$('.header-container').css("height",
+			(parseInt($('.header-container').css('max-height'))-height).toString()+"px")
 		$('.header').css("top", (-height).toString()+"px")
 
 	}

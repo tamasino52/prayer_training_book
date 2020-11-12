@@ -58,7 +58,7 @@
 	--body-8: 7pt;
 
 	/* header height */
-	--header-height: 490px;
+	--header-height: 300px;
 }
 
 /*********************************
@@ -308,11 +308,11 @@ img
 	z-index:96;
 	position:fixed;
 	min-height: 60px;
-	height: 490px;
+	height: var(--header-height)px;
+	max-height: var(--header-height);
 }
 .header-background
 {
-
 }
 .header *, .header
 {
