@@ -248,9 +248,10 @@ if os.path.exists('./stats.pickle'):
         pickle_data = pickle.load(f)
 
     for index, book_info in enumerate(book_list):
-        book_info['watch'] = pickle_data[index]
-else:
-    pickle_data = [0] * 200
+        try:
+            book_info['watch'] = pickle_data[index]
+        except IndexError:
+            pickle_data.append(0)
 
 
 @app.route('/')
