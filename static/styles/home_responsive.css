@@ -184,27 +184,14 @@
 
 @media only screen and (max-width: 480px)
 {
-	:root
-	{
-		/* Header Font Size */
-		--head-1: 30pt;
-		--head-2: 25pt;
-		--head-3: 18pt;
-		--head-4: 16pt;
-		--head-5: 14pt;
-		--head-6: 12pt;
-		--head-7: 10pt;
-
-		/* Context Font Size */
-		--body-1: 20pt;
-		--body-2: 18pt;
-		--body-3: 15pt;
-		--body-4: 14pt;
-		--body-5: 12pt;
-		--body-6: 10pt;
-		--body-7: 9pt;
-		--body-8: 7pt;
-	}
+	.size-header *, .size-header {font-size: 25pt;}
+	.size-version *, .size-version {font-size: 8pt;}
+	.size-subheader *, .size-subheader {font-size: 11pt;}
+	.size-bookheader *, .size-bookheader {font-size: 17pt;}
+	.size-pageheader *, .size-pageheader {font-size: 13pt;}
+	.size-pageinfo *, .size-pageinfo {font-size: 8pt;}
+	.size-btm-header *, .size-btm-header {font-size: 11pt;}
+	.size-footer *, .size-footer {font-size: 5pt;}
 
 	.header-container
 	{
@@ -217,7 +204,7 @@
 	.header-version
 	{
 		height: content-box;
-		margin-bottom: 8px;
+		margin-bottom: 6px;
 	}
 
 }

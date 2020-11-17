@@ -38,25 +38,6 @@
 
 	/* Font Setting */
 	--sans: 'KoPub Dotum', sans-serif;
-
-	/* Header Font Size */
-	--head-1: 40pt;
-	--head-2: 30pt;
-	--head-3: 20pt;
-	--head-4: 16pt;
-	--head-5: 14pt;
-	--head-6: 12pt;
-	--head-7: 10pt;
-
-	/* Context Font Size */
-	--body-1: 24pt;
-	--body-2: 20pt;
-	--body-3: 17pt;
-	--body-4: 16pt;
-	--body-5: 14pt;
-	--body-6: 12pt;
-	--body-7: 10pt;
-	--body-8: 8pt;
 }
 
 /*********************************
@@ -117,21 +98,14 @@ a:visited {
 }
 
 /* font size */
-.head-1 {font-size: var(--head-1);}
-.head-2 {font-size: var(--head-2);}
-.head-3 {font-size: var(--head-3);}
-.head-4 {font-size: var(--head-4);}
-.head-5 {font-size: var(--head-5);}
-.head-6 {font-size: var(--head-6);}
-.head-7 {font-size: var(--head-7);}
-
-.body-1 *, .body-1 {font-size: var(--body-1);}
-.body-2 *, .body-2 {font-size: var(--body-2);}
-.body-3 *, .body-3 {font-size: var(--body-3);}
-.body-4 *, .body-4 {font-size: var(--body-4);}
-.body-5 *, .body-5 {font-size: var(--body-5);}
-.body-6 *, .body-6 {font-size: var(--body-6);}
-.body-7 *, .body-7 {font-size: var(--body-7);}
+.size-header *, .size-header {font-size: 36pt;}
+.size-version *, .size-version {font-size: 11pt;}
+.size-subheader *, .size-subheader {font-size: 16pt;}
+.size-bookheader *, .size-bookheader {font-size: 30pt;}
+.size-pageheader *, .size-pageheader {font-size: 18pt;}
+.size-pageinfo *, .size-pageinfo {font-size: 12pt;}
+.size-btm-header *, .size-btm-header {font-size: 14pt;}
+.size-footer *, .size-footer {font-size: 7pt;}
 
 /* font style */
 .sans *, .sans {
@@ -322,7 +296,7 @@ img
 {
 	margin-left: 3px;
 	height: content-box;
-	margin-bottom: 12px;
+	margin-bottom: 10px;
 }
 /*********************************
 4. Subheader
@@ -353,12 +327,12 @@ img
 {
 	color: var(--accent-color);
 	padding-bottom: 0px;
-	padding-top: 20px;
+	padding-top: 5px;
 }
 .context-container
 {
 	background: var(--background-color);
-	padding: 42px 30%;
+	padding: 22px 30%;
 }
 .context:hover *, .context:active *, .context:focus *, .context:hover, .context:active, .context:focus
 {
@@ -409,12 +383,11 @@ img
 }
 .subfooter *, .subfooter
 {
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 	color: var(--footer-text-color);
 	-webkit-text-shadow: var(--dark-shadow-color) 0 0 2px;
 	text-shadow: var(--dark-shadow-color) 0 0 2px;
-	line-height: 1.4;
 }
 
 /*********************************

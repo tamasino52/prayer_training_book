@@ -122,6 +122,9 @@ $(document).ready(function()
 				play: function() { // To avoid multiple jPlayers playing together.
 					$(this).jPlayer("pauseOthers");
 				},
+			  	ended: function() { // The $.jPlayer.event.ended event
+					$(this).jPlayer("play"); // Repeat the media
+				},
 				swfPath: "../static/plugins/jPlayer",
 				supplied: "mp3",
 				cssSelectorAncestor: "#jp_container_1",

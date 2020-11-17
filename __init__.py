@@ -30,7 +30,7 @@ book_list = [
         'title': '담임목사님을 위한 기도',
         'image': '../static/images/church.jpg',
         'context': 'context/담임목사님을 위한 기도.html',
-        'mp3': '../static/files/담임목사님을+위한+기도_audio.mp3',
+        'mp3': '../static/files/담임목사님을+위한+기도_audio2.mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -57,7 +57,7 @@ book_list = [
         'title': '사람을 위한 기도',
         'image': '../static/images/family1.jpg',
         'context': 'context/사람을 위한 기도.html',
-        'mp3': '../static/files/사람을+위한+기도_audio.mp3',
+        'mp3': '../static/files/사람을+위한+기도_audio2.mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -66,7 +66,7 @@ book_list = [
         'title': '가정을 위한 기도',
         'image': '../static/images/family2.jpg',
         'context': 'context/가정을 위한 기도.html',
-        'mp3': '../static/files/가정을+위한+기도_audio.mp3',
+        'mp3': '../static/files/가정을+위한+기도_audio2.mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -93,7 +93,7 @@ book_list = [
         'title': '부모를 위한 기도',
         'image': '../static/images/contact.jpg',
         'context': 'context/부모를 위한 기도.html',
-        'mp3': '../static/files/부모를+위한+기도_audio.mp3',
+        'mp3': '../static/files/부모를+위한+기도_audio2.mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -129,7 +129,7 @@ book_list = [
         'title': '회개기도',
         'image': '../static/images/blue.jpg',
         'context': 'context/회개기도.html',
-        'mp3': '../static/files/회개기도_audio.mp3',
+        'mp3': '../static/files/회개기도_audio2.mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -231,6 +231,15 @@ book_list = [
         'mp3': '../static/files/하루를+마감하며+드리는+기도_audio.mp3',
         'watch': 0,
         'update': '2020-11-05'
+    },
+    {
+        'id': 25,
+        'title': '기도훈련집 전체 한 번에 읽기',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/기도훈련집1.html',
+        'mp3': '../static/files/기도훈련집(압축).mp3',
+        'watch': 0,
+        'update': '2020-11-17'
     }
 ]
 
@@ -241,7 +250,7 @@ if os.path.exists('./stats.pickle'):
     for index, book_info in enumerate(book_list):
         book_info['watch'] = pickle_data[index]
 else:
-    pickle_data = [0] * book_list.__len__()
+    pickle_data = [0] * 200
 
 
 @app.route('/')

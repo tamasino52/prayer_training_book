@@ -151,9 +151,8 @@
 
 @media only screen and (max-width: 575px)
 {
-	.header-container
-	{
-		height: 280px;
+	:root {
+		--header-height: 250px;
 	}
 	.subheader-container {
 		height: auto;
@@ -180,32 +179,19 @@
 
 @media only screen and (max-width: 480px)
 {
-	:root
-	{
-		/* Header Font Size */
-		--head-1: 25pt;
-		--head-2: 21pt;
-		--head-3: 18pt;
-		--head-4: 16pt;
-		--head-5: 14pt;
-		--head-6: 12pt;
-		--head-7: 10pt;
-
-		/* Context Font Size */
-		--body-1: 20pt;
-		--body-2: 18pt;
-		--body-3: 15pt;
-		--body-4: 14pt;
-		--body-5: 12pt;
-		--body-6: 10pt;
-		--body-7: 9pt;
-		--body-8: 7pt;
+	:root {
+		--header-height: 200px;
 	}
+	.size-header *, .size-header {font-size: 18pt;}
+	.size-subheader *, .size-subheader {font-size: 10pt;}
+	.size-tolist *, .size-tolist {font-size: 12pt;}
+	.size-context *, .size-context {font-size: 7pt;}
+	.size-page-header *, .size-page-header {font-size: 10pt;}
+	.size-footer-header *, .size-footer-header {font-size: 13pt;}
+	.size-footer-subheader *, .size-footer-subheader {font-size: 10pt;}
+	.size-footer-info *, .size-footer-info {font-size: 7pt;}
+	.size-footer-cc *, .size-footer-cc {font-size: 6pt;}
 
-	.header-container
-	{
-		height: 200px;
-	}
 	.header-version
 	{
 		height: content-box;

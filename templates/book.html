@@ -17,14 +17,12 @@
 <div class="super_container">
 
 	<!-- Home -->
-	<div class="header-container">
-		<div class="header-background parallax_background parallax-window" data-parallax="scroll" data-speed="0.3"
-             style="background-image: url({{ book_list[book_id]['image'] }});"></div>
+	<div class="header-container" style="background-image: url({{ book_list[book_id]['image'] }});">
         <div class="header fill_all center-all d-flex flex-column">
-            <div class="header-title head-1 weight-1">
+            <div class="header-title size-header weight-1">
                 {{ book_list[book_id]['title'] }}
             </div>
-            <div class="header-subtitle body-2 weight-2">
+            <div class="header-subtitle size-subheader weight-2">
                 {{ book_id + 1 }}번 | 조회수 {{ book_list[book_id]['watch'] }}회
             </div>
         </div>
@@ -92,7 +90,7 @@
                     </div>
                 </a>
             {% endif %}
-            <a href="/home"><div class="list-btn icon head-4 weight-1 accent-shadow">목록으로</div></a>
+            <a href="/home"><div class="list-btn icon size-tolist weight-1 accent-shadow">목록으로</div></a>
 
             {% if book_id < book_list.__len__() - 1 %}
                 <a href="{{ book_id + 1 }}">
@@ -109,7 +107,7 @@
             {% endif %}
         </div>
 
-        <div class="context body-3 weight-2">
+        <div class="context size-context weight-2">
             [클로바더빙으로 제작한 AI 보이스 입니다] <br><br>
             {% block context %}
             {% endblock %}
@@ -130,7 +128,7 @@
                     </div>
                 </a>
             {% endif %}
-            <a href="/home"><div class="list-btn icon head-4 weight-1 accent-shadow">목록으로</div></a>
+            <a href="/home"><div class="list-btn icon size-tolist weight-1 accent-shadow">목록으로</div></a>
 
             {% if book_id < book_list.__len__() - 1 %}
                 <a href="{{ book_id + 1 }}">
@@ -153,7 +151,7 @@
     <div class="footer">
         <div class="footer-container d-flex flex-column">
             <!-- Other Episodes -->
-            <div class="footer-title head-2 weight-1">
+            <div class="footer-title size-footer-header weight-1">
                 다른 기도문
             </div>
 
@@ -167,13 +165,13 @@
                                 <div class="footer-context-icon">
                                     <div class="icon icon-small"><img class="svg" src="../static/images/bookmark.svg"></div>
                                 </div>
-                                <div class="footer-context-title head-3 accent-shadow">
+                                <div class="footer-context-title size-footer-subheader accent-shadow">
                                     {{ book['title'] }}
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <div class="footer-context-info">
+                    <div class="size-footer-info footer-context-info">
                         <ul class="d-flex flex-row">
                             <li>{{ book['update'] }}</li>
                             <li>조회수 {{ book['watch'] }}회</li>
@@ -183,12 +181,12 @@
                 {% endfor %}
             </div>
 
-            <div class="footer-copyright body-7">
+            <div class="footer-copyright size-footer-cc">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;
                 <script>document.write(new Date().getFullYear());</script>
                 All Rights Reserved.
-                <a href="https://52ch.kr/" target="_blank">오병이어교회.</a>
+                <a class="cc" href="https://52ch.kr/" target="_blank">오병이어교회.</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </div>
         </div>

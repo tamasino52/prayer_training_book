@@ -21,8 +21,8 @@
 	<div class="header-container">
 		<div class="fill_all center-all">
             <div class="header weight-1 d-flex align-items-end">
-                <div class="head-1"><a href="/home">기도훈련집</a></div>
-                <div class="head-6 header-version">BETA 2.1</div>
+                <div class="size-header"><a href="/home">기도훈련집</a></div>
+                <div class="size-version header-version">BETA 2.2</div>
             </div>
 
 		</div>
@@ -30,22 +30,22 @@
 
 	<!-- Subheader -->
 	<div class="subheader-container">
-        <div class="fill_all subheader center-all body-3 weight-2 text-center">
+        <div class="fill_all subheader center-all size-subheader weight-2 text-center">
             기도생활 성공하면 신앙생활 성공하고<br>신앙생활 성공하면 인생도 성공한다
 		</div>
 	</div>
 
 	<!-- Intro -->
 	<div class="context-container d-flex flex-column">
-        <div class="book-header head-2 weight-1">기도훈련집1</div>
+        <div class="book-header size-bookheader weight-1">기도훈련집1</div>
         <hr>
         {% for book in book_list %}
         <!-- List -->
         <div class="context d-flex flex-column">
             <a href="book/{{ book["id"] }}">
-                <div class="context-title head-3 weight-2">{{ book["title"] }}</div>
+                <div class="context-title size-pageheader weight-2">{{ book["title"] }}</div>
             </a>
-            <div class="context-info body-5 weight-2">
+            <div class="context-info size-pageinfo weight-2">
                 <ul class="d-flex flex-row">
                     <li>{{ book['id'] + 1 }}번</li>
                     <li>{{ book['update'] }}</li>
@@ -59,7 +59,7 @@
 
     <!-- Subfooter -->
     <div class="subfooter-container">
-        <div class="fill_all subfooter center-all body-6 weight-2 text-center">
+        <div class="fill_all subfooter center-all size-btm-header weight-2 text-center">
             <ul class="d-flex flex-row">
                 <li><a href="/information#contact">Contact</a></li>
                 <li><a href="/information#license">License</a></li>
@@ -70,7 +70,7 @@
 
 	<!-- Footer -->
 	<footer class="footer-container">
-		<div class="footer body-7">
+		<div class="footer size-footer">
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             Copyright &copy;
             <script>document.write(new Date().getFullYear());</script>
