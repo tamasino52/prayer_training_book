@@ -288,8 +288,10 @@ img
 	max-height: var(--header-height);
 	background-size: cover;
 }
-.header-background
+.header-title-container
 {
+	width: 100%;
+	height: var(--header-height) - 50px;
 }
 .header *, .header
 {
@@ -317,8 +319,8 @@ img
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding: 0 30%;
+
 }
 .player
 {
@@ -329,7 +331,6 @@ img
 .player_content
 {
 	width: 100%;
-	padding-left: 12px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
@@ -466,7 +467,7 @@ img
 {
 	margin-top: var(--header-height);
 	background: var(--background-color);
-	padding: 0px 30%;
+	padding: 0 30%;
 }
 
 .context
@@ -477,7 +478,7 @@ img
 
 .btn-container
 {
-	padding: 20px 15px;
+	padding: 20px 0;
 }
 
 .move-btn, .move-btn *

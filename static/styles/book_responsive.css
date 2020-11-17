@@ -36,7 +36,7 @@
 
 @media only screen and (max-width: 1440px)
 {
-	.context-container, .footer-container
+	.context-container, .footer-container, .player_container
 	{
 		padding-left: 25%;
 		padding-right: 25%;
@@ -67,7 +67,7 @@
 
 @media only screen and (max-width: 1199px)
 {
-	.context-container, .footer-container
+	.context-container, .footer-container, .player_container
 	{
 		padding-left: 20%;
 		padding-right: 20%;
@@ -89,7 +89,7 @@
 
 @media only screen and (max-width: 1024px)
 {
-	.context-container, .footer-container
+	.context-container, .footer-container, .player_container
 	{
 		padding-left: 15%;
 		padding-right: 15%;
@@ -120,7 +120,7 @@
 
 @media only screen and (max-width: 880px)
 {
-	.context-container, .footer-container
+	.context-container, .footer-container, .player_container
 	{
 		padding-left: 10%;
 		padding-right: 10%;
@@ -157,7 +157,7 @@
 	.subheader-container {
 		height: auto;
 	}
-	.context-container, .footer-container
+	.context-container, .footer-container, .player_container
 	{
 		padding-left: 5%;
 		padding-right: 5%;
@@ -185,11 +185,11 @@
 	.size-header *, .size-header {font-size: 18pt;}
 	.size-subheader *, .size-subheader {font-size: 10pt;}
 	.size-tolist *, .size-tolist {font-size: 12pt;}
-	.size-context *, .size-context {font-size: 7pt;}
+	.size-context *, .size-context {font-size: 9pt;}
 	.size-page-header *, .size-page-header {font-size: 10pt;}
-	.size-footer-header *, .size-footer-header {font-size: 13pt;}
-	.size-footer-subheader *, .size-footer-subheader {font-size: 10pt;}
-	.size-footer-info *, .size-footer-info {font-size: 7pt;}
+	.size-footer-header *, .size-footer-header {font-size: 15pt;}
+	.size-footer-subheader *, .size-footer-subheader {font-size: 12pt;}
+	.size-footer-info *, .size-footer-info {font-size: 8pt;}
 	.size-footer-cc *, .size-footer-cc {font-size: 6pt;}
 
 	.header-version
