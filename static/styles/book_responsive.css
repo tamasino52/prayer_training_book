@@ -173,13 +173,13 @@
 		--header-height: 200px;
 	}
 	.size-header *, .size-header {font-size: 18pt;}
-	.size-subheader *, .size-subheader {font-size: 10pt;}
-	.size-tolist *, .size-tolist {font-size: 13pt;}
-	.size-context *, .size-context {font-size: 10pt;}
-	.size-page-header *, .size-page-header {font-size: 15pt;}
+	.size-subheader *, .size-subheader {font-size: 12pt;}
+	.size-tolist *, .size-tolist {font-size: 14pt;}
+	.size-context *, .size-context {font-size: 12pt;}
+	.size-page-header *, .size-page-header {font-size: 16pt;}
 	.size-footer-header *, .size-footer-header {font-size: 15pt;}
 	.size-footer-subheader *, .size-footer-subheader {font-size: 12pt;}
-	.size-footer-info *, .size-footer-info {font-size: 8pt;}
+	.size-footer-info *, .size-footer-info {font-size: 9pt;}
 	.size-footer-cc *, .size-footer-cc {font-size: 6pt;}
 
 	.header-version
