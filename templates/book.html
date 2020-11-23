@@ -17,28 +17,19 @@
 
 <div class="super_container">
 
-	<!-- Home -->
+	<!-- Header -->
 	<div class="header-container" style="background-image: url({{ book_list[book_id]['image'] }});">
+
+        <!-- Header Icons -->
         <div class="header header-icon-container d-flex justify-content-end">
-            <!--
-            <div class="header-btn icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2,5.27L3.28,4L20,20.72L18.73,22L9,12.27V17.5A3.5,3.5 0 0,1 5.5,21A3.5,3.5 0 0,1 2,17.5A3.5,3.5 0 0,1 5.5,14C6.04,14 6.55,14.12 7,14.34V10.27L2,5.27M21,3V15.5C21,16.5 20.57,17.42 19.88,18.06L14.94,13.12C15.58,12.43 16.5,12 17.5,12C18.04,12 18.55,12.12 19,12.34V6.47L10.17,8.35L7.66,5.84L21,3Z" />
-            </div>
-            -->
             <a href="/download/{{ book_id }}">
                 <div class="header-btn icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124 132"><path d="M99.1,113.7c2.6,0,4.7-2.1,4.7-4.7V79.9h11.2v29.8c0,8.4-6.8,15.2-15.2,15.2H18.5c-8.4,0-15.2-6.8-15.2-15.2V79.9h11.2V109  c0,2.6,2.1,4.7,4.7,4.7H99.1L99.1,113.7z M37.1,17.7h43.9V57h16.8L59.1,94.8L20.4,57h16.8V17.7L37.1,17.7z"/></svg>
                 </div>
             </a>
-            <!--
-            <div class="header-btn icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z"/></svg>
-            </div>
-            <div class="header-btn icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"/></svg>
-            </div>
-            -->
         </div>
+
+        <!-- Header Titles -->
         <div class="header header-title-container center-all d-flex flex-column">
             <div class="header-title size-header weight-1">
                 {{ book_list[book_id]['title'] }}
@@ -48,6 +39,7 @@
             </div>
         </div>
 
+        <!-- Header Music Player -->
 		<div class="player_container">
 			<div class="container">
 				<div class="row">
@@ -92,12 +84,15 @@
 			</div>
 		</div>
 	</div>
+    <!-- Header End -->
 
 	<!-- Context -->
 	<div class="context-container">
 
-        <!-- 이전, 목록, 다음 -->
+        <!-- 이전, 목록으로, 다음 -->
         <div class="btn-container d-flex justify-content-between align-self-center">
+
+            <!-- 이전 -->
             {% if book_id > 0 %}
                 <a href="{{ book_id - 1 }}">
                     <div class="move-btn icon">
@@ -111,8 +106,11 @@
                     </div>
                 </a>
             {% endif %}
+
+            <!-- 목록으로 -->
             <a href="/home"><div class="list-btn icon size-tolist weight-1 accent-shadow">목록으로</div></a>
 
+            <!-- 다음 -->
             {% if book_id < book_list.__len__() - 1 %}
                 <a href="{{ book_id + 1 }}">
                     <div class="move-btn icon">
@@ -128,6 +126,7 @@
             {% endif %}
         </div>
 
+        <!-- 본문 글 -->
         <div class="context size-context weight-2">
             [클로바더빙으로 제작한 AI 보이스 입니다] <br><br>
             {% block context %}
@@ -136,6 +135,8 @@
 
         <!-- 이전, 목록, 다음 -->
         <div class="btn-container d-flex justify-content-between align-self-center">
+
+            <!-- 이전 -->
             {% if book_id > 0 %}
                 <a href="{{ book_id - 1 }}">
                     <div class="move-btn icon">
@@ -149,8 +150,11 @@
                     </div>
                 </a>
             {% endif %}
+
+            <!-- 목록으로 -->
             <a href="/home"><div class="list-btn icon size-tolist weight-1 accent-shadow">목록으로</div></a>
 
+            <!-- 다음 -->
             {% if book_id < book_list.__len__() - 1 %}
                 <a href="{{ book_id + 1 }}">
                     <div class="move-btn icon">
@@ -178,7 +182,7 @@
 
             <div class="footer-context">
                 {% for book in book_list[book_id - 2:book_id] + book_list[book_id + 1:book_id + 3] %}
-                <!-- Other 1 -->
+                <!-- Other -->
                 <div class="footer-context-element d-flex flex-column">
                     <div class="footer-context-title">
                         <a href="{{ book['id'] }}">
@@ -202,6 +206,7 @@
                 {% endfor %}
             </div>
 
+            <!-- Copyright -->
             <div class="footer-copyright size-footer-cc">
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 Copyright &copy;

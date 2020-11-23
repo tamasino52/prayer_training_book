@@ -5,10 +5,9 @@
 [Table of Contents]
 
 1. Vars and Inits
-2. Set Header
-5. Init SVG
-6. Init Single Player
-
+2. Set Header(Scroll Spy)
+3. Init SVG
+4. Init Single Player
 
 ******************************/
 
@@ -16,11 +15,9 @@ $(document).ready(function()
 {
 	"use strict";
 
-	/*
-
+	/*********************************
 	1. Vars and Inits
-
-	*/
+	*********************************/
 
 	var ctrl = new ScrollMagic.Controller();
 
@@ -43,11 +40,10 @@ $(document).ready(function()
 		setHeader();
 	});
 
-	/* 
-
-	2. Set Header
-
-	*/
+	/*********************************
+	2. Set Header(Scroll Spy)
+	 - 스크롤 움직임을 감지하여 상단 바의 높이와 위치를 조정
+	*********************************/
 
 	function setHeader()
 	{
@@ -59,12 +55,9 @@ $(document).ready(function()
 
 	}
 
-
-	/* 
-
-	5. Init SVG
-
-	*/
+	/*********************************
+	3. Init SVG
+	*********************************/
 
 	function initSvg()
 	{
@@ -101,11 +94,10 @@ $(document).ready(function()
 		}	
 	}
 
-	/* 
-
-	6. Init Single Player
-
-	*/
+	/*********************************
+	4. Init Single Player
+	 - 음악 플레이어 세부 설정
+	*********************************/
 
 	function initSinglePlayer()
 	{

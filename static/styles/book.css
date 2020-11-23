@@ -8,8 +8,9 @@
 1. User Setting
 2. General
 3. Header
-4. Context
-5. Footer
+4. Music Player
+5. Context
+6. Footer
 
 ******************************/
 
@@ -46,7 +47,7 @@
 }
 
 /*********************************
-1. General
+2. General
 *********************************/
 
 *
@@ -337,7 +338,6 @@ img
 	bottom: 0;
 	width: 100%;
 	padding: 0 var(--page-padding);
-
 }
 .player
 {
@@ -351,10 +351,11 @@ img
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
-.single_player_container
-{
 
-}
+/*********************************
+4. Music Player
+*********************************/
+
 .single_player
 {
 	width: 100%;
@@ -474,6 +475,7 @@ img
 /*********************************
 5. Context
 *********************************/
+
 .page-header
 {
 	padding-bottom: 5px;
@@ -493,11 +495,13 @@ img
 	line-height: 1.875;
 }
 
+/* button */
 .btn-container
 {
 	padding: 20px 0;
 }
 
+/* 이전, 다음 */
 .move-btn, .move-btn *
 {
 	height: 30px;
@@ -505,6 +509,7 @@ img
 	fill: var(--accent-color);
 }
 
+/* 목록으로 */
 .list-btn
 {
 	color: var(--accent-color);

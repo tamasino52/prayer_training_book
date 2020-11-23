@@ -1,17 +1,27 @@
+import os
+import pickle
+
+from flask import Flask, render_template, make_response, send_from_directory, redirect, send_file
 from flask_bootstrap import Bootstrap
-from flask import Flask, render_template, make_response, send_from_directory, request, redirect, url_for, send_file
 from flask_caching import Cache
-import os, pickle
 
-
+# 플라스크 세팅 (부트스트랩, 캐시 포함)
 app = Flask(__name__, static_folder='static')
 Bootstrap(app)
 cache = Cache()
 cache.init_app(app, config={'CACHE_TYPE': 'simple'})
 
-
+# 데이터베이스 역할을 하는 리스트
+"""
+id : 책 번호(기도훈련집 1 : 0~25, 기타 : 26~)
+title : 책 이름 (음원 파일명, 사용자에게 보여지는 이름)
+image : 책 상단에 보이는 배경화면이 될 이미지 파일
+context : 상속받을 템플릿 명
+mp3 : 음원
+watch : 조회수 (pickle 파일에서 초기화)
+update : 최근 갱신일
+"""
 book_list = [
-
     {
         'id': 0,
         'title': '나라를 위한 기도',
@@ -257,6 +267,7 @@ book_list = [
     }
 ]
 
+# pickle 파일에서 마지막으로 저장했던 기존 데이터를 로드
 if os.path.exists('./stats.pickle'):
     with open('stats.pickle', 'rb') as f:
         pickle_data = pickle.load(f)
@@ -268,11 +279,13 @@ if os.path.exists('./stats.pickle'):
             pickle_data.append(0)
 
 
+# 홈페이지 접근 시 메인 홈 페이지로 리다이렉트
 @app.route('/')
 def domain():
     return redirect('/home')
     
 
+# 메인 홈 페이지
 @app.route('/home')
 @cache.cached(timeout=3)
 def home():
@@ -280,6 +293,7 @@ def home():
     return resp
 
 
+# 뷰어 페이지
 @app.route('/book/<int:book_id>')
 def book(book_id):
     book_list[book_id]['watch'] += 1
@@ -293,20 +307,24 @@ def book(book_id):
     return resp
 
 
+# 라이센스 정보 페이지
 @app.route('/information')
 def information():
     return make_response(render_template('information.html'))
 
 
+# 홈페이지 아이콘
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(app.root_path, 'favicon.ico')
 
 
+# 파일 다운로드 경로
 @app.route('/download/<int:book_id>')
 @cache.cached(timeout=3)
 def download(book_id):
-    return send_file(os.path.join("static", book_list[book_id]['mp3']), attachment_filename=book_list[book_id]['title']+'.mp3', as_attachment=True)
+    return send_file(os.path.join("static", book_list[book_id]['mp3']),
+                     attachment_filename=book_list[book_id]['title'] + '.mp3', as_attachment=True)
 
 
 if __name__ == "__main__":

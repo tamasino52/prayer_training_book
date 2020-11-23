@@ -10,7 +10,8 @@
 3. Header
 4. Subheader
 5. Context
-6. Footer
+6. SubFooter
+7. Footer
 
 ******************************/
 
@@ -56,7 +57,7 @@
 body
 {
 	font-family: var(--sans);
-	font-size: var(--body-6);
+	font-size: 10pt;
 	font-weight: 400;
 	background: var(--background-color);
 	color: var(--text-color);
@@ -117,7 +118,6 @@ a:visited {
 .sans *, .sans {
 	font-family: var(--sans);
 }
-
 
 /* font weight */
 .weight-1 *, .weight-1 {font-weight: 700;}
@@ -304,6 +304,7 @@ img
 	height: content-box;
 	margin-bottom: 10px;
 }
+
 /*********************************
 4. Subheader
 *********************************/
@@ -397,7 +398,7 @@ img
 }
 
 /*********************************
-6. Footer
+7. Footer
 *********************************/
 
 .footer-container
