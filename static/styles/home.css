@@ -71,6 +71,12 @@ div
     box-sizing: border-box;
 }
 
+hr
+{
+	margin-top: 0.5rem;
+	margin-bottom: 0.7rem;
+}
+
 ul
 {
 	list-style: none;
@@ -327,7 +333,7 @@ img
 {
 	color: var(--accent-color);
 	padding-bottom: 0px;
-	padding-top: 5px;
+	padding-top: 10px;
 }
 .context-container
 {

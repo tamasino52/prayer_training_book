@@ -22,7 +22,7 @@
 		<div class="fill_all center-all">
             <div class="header weight-1 d-flex align-items-end">
                 <div class="size-header"><a href="/home">기도훈련집</a></div>
-                <div class="size-version header-version">BETA 2.2</div>
+                <div class="size-version header-version">BETA 2.3</div>
             </div>
 
 		</div>
@@ -38,8 +38,31 @@
 	<!-- Intro -->
 	<div class="context-container d-flex flex-column">
         <div class="book-header size-bookheader weight-1">기도훈련집1</div>
+
         <hr>
-        {% for book in book_list %}
+
+        {% for book in book_list[0:26] %}
+        <!-- List -->
+        <div class="context d-flex flex-column">
+            <a href="book/{{ book["id"] }}">
+                <div class="context-title size-pageheader weight-2">{{ book["title"] }}</div>
+            </a>
+            <div class="context-info size-pageinfo weight-2">
+                <ul class="d-flex flex-row">
+                    <li>{{ book['id'] + 1 }}번</li>
+                    <li>{{ book['update'] }}</li>
+                    <li>조회수 {{ book['watch'] }}회</li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+
+        {% endfor %}
+
+        <div class="book-header size-bookheader weight-1">50일 소원기도</div>
+        <hr>
+
+        {% for book in book_list[26:] %}
         <!-- List -->
         <div class="context d-flex flex-column">
             <a href="book/{{ book["id"] }}">

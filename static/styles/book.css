@@ -40,6 +40,9 @@
 
 	/* header height */
 	--header-height: 300px;
+
+	/* page padding */
+	--page-padding: 30%;
 }
 
 /*********************************
@@ -291,7 +294,21 @@ img
 .header-title-container
 {
 	width: 100%;
-	height: var(--header-height) - 50px;
+	height: calc(var(--header-height) - 40px);
+}
+.header-icon-container
+{
+	height: 40px;
+	width: 100%;
+	padding: 0 calc(var(--page-padding) - 0%);
+}
+
+.header-btn
+{
+	height: 30px;
+	width: 30px;
+	margin: 7px 5px;
+	fill: var(--background-color);
 }
 .header *, .header
 {
@@ -319,7 +336,7 @@ img
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	padding: 0 30%;
+	padding: 0 var(--page-padding);
 
 }
 .player
@@ -467,7 +484,7 @@ img
 {
 	margin-top: var(--header-height);
 	background: var(--background-color);
-	padding: 0 30%;
+	padding: 0 var(--page-padding);
 }
 
 .context
@@ -509,7 +526,7 @@ footer
 {
 	display: block;
 	background: var(--footer-background-color);
-	padding: 14px 30%;
+	padding: 14px var(--page-padding);
 }
 
 .footer-title

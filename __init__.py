@@ -1,9 +1,14 @@
 from flask_bootstrap import Bootstrap
-from flask import Flask, render_template, make_response, send_from_directory, request, redirect, url_for
+from flask import Flask, render_template, make_response, send_from_directory, request, redirect, url_for, send_file
+from flask_caching import Cache
 import os, pickle
+
 
 app = Flask(__name__, static_folder='static')
 Bootstrap(app)
+cache = Cache()
+cache.init_app(app, config={'CACHE_TYPE': 'simple'})
+
 
 book_list = [
 
@@ -240,6 +245,15 @@ book_list = [
         'mp3': '../static/files/기도훈련집(압축).mp3',
         'watch': 0,
         'update': '2020-11-17'
+    },
+    {
+        'id': 26,
+        'title': '소원기도문',
+        'image': '../static/images/wave2.jpg',
+        'context': 'context/소원기도문.html',
+        'mp3': '../static/files/소원기도문_audio.mp3',
+        'watch': 0,
+        'update': '2020-11-23'
     }
 ]
 
@@ -260,6 +274,7 @@ def domain():
     
 
 @app.route('/home')
+@cache.cached(timeout=3)
 def home():
     resp = make_response(render_template('home.html', book_list=book_list))
     return resp
@@ -286,6 +301,12 @@ def information():
 @app.route('/favicon.ico')
 def favicon():
     return send_from_directory(app.root_path, 'favicon.ico')
+
+
+@app.route('/download/<int:book_id>')
+@cache.cached(timeout=3)
+def download(book_id):
+    return send_file(os.path.join("static", book_list[book_id]['mp3']), attachment_filename=book_list[book_id]['title']+'.mp3', as_attachment=True)
 
 
 if __name__ == "__main__":
