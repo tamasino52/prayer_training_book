@@ -347,14 +347,10 @@ def favicon():
 
 
 # 파일 다운로드 경로
-@app.route('/download/<kind>/<int:book_id>')
-def download(kind, book_id):
-
-    if kind == 'mp3':
-        return send_file(os.path.join("static", book_list[book_id]['mp3']),
-                         attachment_filename=book_list[book_id]['title'] + '.mp3', as_attachment=True)
-    else:
-        return send_file(os.path.join("static", book_list[book_id]['bgm']), as_attachment=True)
+@app.route('/download/<int:book_id>')
+def download(book_id):
+    return send_file(os.path.join("static", book_list[book_id]['mp3']),
+                     attachment_filename=book_list[book_id]['title'] + '.mp3', as_attachment=True)
 
 
 if __name__ == "__main__":
