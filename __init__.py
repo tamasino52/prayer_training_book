@@ -331,6 +331,9 @@ def book(book_id):
             pickle.dump(pickle_data, f, pickle.HIGHEST_PROTOCOL)
 
     resp = make_response(render_template(book_list[book_id]['context'], book_id=book_id, book_list=book_list))
+    resp.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    resp.headers['Pragma'] = 'no-cache'
+    resp.headers['Expires'] = '0'
     return resp
 
 
