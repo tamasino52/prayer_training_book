@@ -28,6 +28,7 @@ book_list = [
         'image': '../static/images/city2.jpg',
         'context': 'context/나라를 위한 기도.html',
         'mp3': '../static/files/나라를+위한+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -37,6 +38,7 @@ book_list = [
         'image': '../static/images/church2.jpg',
         'context': 'context/교회를 위한 기도.html',
         'mp3': '../static/files/교회를+위한+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -46,6 +48,7 @@ book_list = [
         'image': '../static/images/church.jpg',
         'context': 'context/담임목사님을 위한 기도.html',
         'mp3': '../static/files/담임목사님을+위한+기도_audio2.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -55,6 +58,7 @@ book_list = [
         'image': '../static/images/cross1.jpg',
         'context': 'context/목장을 위한 기도.html',
         'mp3': '../static/files/목장을+위한+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -64,6 +68,7 @@ book_list = [
         'image': '../static/images/cross2.jpg',
         'context': 'context/태신자를 위한 기도.html',
         'mp3': '../static/files/태신자를+위한+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -73,6 +78,7 @@ book_list = [
         'image': '../static/images/family1.jpg',
         'context': 'context/사람을 위한 기도.html',
         'mp3': '../static/files/사람을+위한+기도_audio2.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -82,6 +88,7 @@ book_list = [
         'image': '../static/images/family2.jpg',
         'context': 'context/가정을 위한 기도.html',
         'mp3': '../static/files/가정을+위한+기도_audio2.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -91,6 +98,7 @@ book_list = [
         'image': '../static/images/blog.jpg',
         'context': 'context/남편을 위한 기도.html',
         'mp3': '../static/files/남편을+위한+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -100,6 +108,7 @@ book_list = [
         'image': '../static/images/episode.jpg',
         'context': 'context/아내를 위한 기도.html',
         'mp3': '../static/files/아내를+위한+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -109,6 +118,7 @@ book_list = [
         'image': '../static/images/contact.jpg',
         'context': 'context/부모를 위한 기도.html',
         'mp3': '../static/files/부모를+위한+기도_audio2.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -118,6 +128,7 @@ book_list = [
         'image': '../static/images/family2.jpg',
         'context': 'context/자녀를 위한 기도.html',
         'mp3': '../static/files/자녀를+위한+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -127,6 +138,7 @@ book_list = [
         'image': '../static/images/forest.jpg',
         'context': 'context/개인기도 1.html',
         'mp3': '../static/files/개인기도+1_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -136,6 +148,7 @@ book_list = [
         'image': '../static/images/cloud.jpg',
         'context': 'context/개인기도 2.html',
         'mp3': '../static/files/개인기도+2_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -145,6 +158,7 @@ book_list = [
         'image': '../static/images/blue.jpg',
         'context': 'context/회개기도.html',
         'mp3': '../static/files/회개기도_audio2.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -154,6 +168,7 @@ book_list = [
         'image': '../static/images/city3.jpg',
         'context': 'context/영적인 힘을 얻기 위한 기도.html',
         'mp3': '../static/files/영적인+힘을+얻기+위한+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -163,6 +178,7 @@ book_list = [
         'image': '../static/images/blue.jpg',
         'context': 'context/시험이 있을 때 드리는 기도.html',
         'mp3': '../static/files/시험이+있을+때+드리는+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -172,6 +188,7 @@ book_list = [
         'image': '../static/images/cross4.jpg',
         'context': 'context/기도가 잘 되지 않을 때 드리는 기도.html',
         'mp3': '../static/files/기도가+잘+되지+않을+때+드리는+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -181,6 +198,7 @@ book_list = [
         'image': '../static/images/cross3.jpg',
         'context': 'context/삶에 지칠 때 드리는 기도.html',
         'mp3': '../static/files/삶에+지칠+때+드리는+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -190,6 +208,7 @@ book_list = [
         'image': '../static/images/day.jpg',
         'context': 'context/감사할 때 드리는 기도.html',
         'mp3': '../static/files/감사할+때+드리는+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -199,6 +218,7 @@ book_list = [
         'image': '../static/images/blue.jpg',
         'context': 'context/몸이 아플 때 드리는 기도.html',
         'mp3': '../static/files/몸이+아플+때+드리는+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -208,6 +228,7 @@ book_list = [
         'image': '../static/images/wave.jpg',
         'context': 'context/부부간에 불화가 있을 때 드리는 기도.html',
         'mp3': '../static/files/부부간에+불화가+있을+때+드리는+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -217,6 +238,7 @@ book_list = [
         'image': '../static/images/wave2.jpg',
         'context': 'context/물질적인 어려움에 있을 때 드리는 기도.html',
         'mp3': '../static/files/물질적인+어려움에+있을+때+드리는+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -226,6 +248,7 @@ book_list = [
         'image': '../static/images/business.jpg',
         'context': 'context/사업을 위한 기도.html',
         'mp3': '../static/files/사업을+위한+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -235,6 +258,7 @@ book_list = [
         'image': '../static/images/day.jpg',
         'context': 'context/하루를 시작하며 드리는 기도.html',
         'mp3': '../static/files/하루를+시작하며+드리는+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -244,6 +268,7 @@ book_list = [
         'image': '../static/images/night.jpg',
         'context': 'context/하루를 마감하며 드리는 기도.html',
         'mp3': '../static/files/하루를+마감하며+드리는+기도_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.22 - 목마른 사슴 (Guitar 이승배).mp3',
         'watch': 0,
         'update': '2020-11-05'
     },
@@ -253,6 +278,7 @@ book_list = [
         'image': '../static/images/blog.jpg',
         'context': 'context/기도훈련집1.html',
         'mp3': '../static/files/기도훈련집(압축).mp3',
+        'bgm': '../static/files/비파와 수금 Vol.2 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-17'
     },
@@ -262,6 +288,7 @@ book_list = [
         'image': '../static/images/wave2.jpg',
         'context': 'context/소원기도문.html',
         'mp3': '../static/files/소원기도문_audio.mp3',
+        'bgm': '../static/files/비파와 수금 Vol.15 - 내일 일은 난 몰라요 (Piano 유진희).mp3',
         'watch': 0,
         'update': '2020-11-23'
     }
@@ -320,11 +347,14 @@ def favicon():
 
 
 # 파일 다운로드 경로
-@app.route('/download/<int:book_id>')
-@cache.cached(timeout=3)
-def download(book_id):
-    return send_file(os.path.join("static", book_list[book_id]['mp3']),
-                     attachment_filename=book_list[book_id]['title'] + '.mp3', as_attachment=True)
+@app.route('/download/<kind>/<int:book_id>')
+def download(kind, book_id):
+
+    if kind == 'mp3':
+        return send_file(os.path.join("static", book_list[book_id]['mp3']),
+                         attachment_filename=book_list[book_id]['title'] + '.mp3', as_attachment=True)
+    else:
+        return send_file(os.path.join("static", book_list[book_id]['bgm']), as_attachment=True)
 
 
 if __name__ == "__main__":

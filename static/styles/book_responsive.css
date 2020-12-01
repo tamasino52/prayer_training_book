@@ -171,6 +171,7 @@
 {
 	:root {
 		--header-height: 200px;
+		--page-padding: 0%;
 	}
 	.size-header *, .size-header {font-size: 18pt;}
 	.size-subheader *, .size-subheader {font-size: 12pt;}
