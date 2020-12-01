@@ -11,6 +11,8 @@ Bootstrap(app)
 cache = Cache()
 cache.init_app(app, config={'CACHE_TYPE': 'simple'})
 
+version = '2.4'
+
 # 데이터베이스 역할을 하는 리스트
 """
 id : 책 번호(기도훈련집 1 : 0~25, 기타 : 26~)
@@ -316,7 +318,7 @@ def domain():
 @app.route('/home')
 @cache.cached(timeout=3)
 def home():
-    resp = make_response(render_template('home.html', book_list=book_list))
+    resp = make_response(render_template('home.html', book_list=book_list, version=version))
     return resp
 
 
@@ -330,7 +332,7 @@ def book(book_id):
         with open('stats.pickle', 'wb') as f:
             pickle.dump(pickle_data, f, pickle.HIGHEST_PROTOCOL)
 
-    resp = make_response(render_template(book_list[book_id]['context'], book_id=book_id, book_list=book_list))
+    resp = make_response(render_template(book_list[book_id]['context'], book_id=book_id, book_list=book_list, version=version))
     resp.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
     resp.headers['Pragma'] = 'no-cache'
     resp.headers['Expires'] = '0'
