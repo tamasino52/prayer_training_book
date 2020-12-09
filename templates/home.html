@@ -64,7 +64,28 @@
         <div class="book-header size-bookheader weight-1">짧은 기도문</div>
         <hr>
 
-        {% for book in book_list[26:] %}
+        {% for book in book_list[26:29] %}
+        <!-- List -->
+        <div class="context d-flex flex-column">
+            <a href="book/{{ book["id"] }}">
+                <div class="context-title size-pageheader weight-2">{{ book["title"] }}</div>
+            </a>
+            <div class="context-info size-pageinfo weight-2">
+                <ul class="d-flex flex-row">
+                    <li>{{ book['id'] + 1 }}번</li>
+                    <li>{{ book['update'] }}</li>
+                    <li>조회수 {{ book['watch'] }}회</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        {% endfor %}
+
+
+        <div class="book-header size-bookheader weight-1">기도훈련집 초등부</div>
+        <hr>
+
+        {% for book in book_list[29:] %}
         <!-- List -->
         <div class="context d-flex flex-column">
             <a href="book/{{ book["id"] }}">
@@ -86,9 +107,7 @@
     <div class="subfooter-container">
         <div class="fill_all subfooter center-all size-btm-header weight-2 text-center">
             <ul class="d-flex flex-row">
-                <li><a href="/information#contact">Contact</a></li>
-                <li><a href="/information#license">License</a></li>
-                <li><a href="/information#location">Location</a></li>
+                <li><a href="/information">Information</a></li>
             </ul>
         </div>
     </div>

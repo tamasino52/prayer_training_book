@@ -83,7 +83,7 @@
                 {{ book_list[book_id]['title'] }}
             </div>
             <div class="header-subtitle size-subheader weight-2">
-                {{ book_id + 1 }}번 | 조회수 {{ book_list[book_id]['watch'] }}회
+                {{ book_id + 1 }}번 | 저자 권영구 | 조회수 {{ book_list[book_id]['watch'] }}회
             </div>
         </div>
 
@@ -232,11 +232,11 @@
         <div class="footer-container d-flex flex-column">
             <!-- Other Episodes -->
             <div class="footer-title size-footer-header weight-1">
-                다른 기도문
+                짧은 기도문
             </div>
 
             <div class="footer-context">
-                {% for book in book_list[book_id - 2:book_id] + book_list[book_id + 1:book_id + 3] %}
+                {% for book in book_list[26:29] %}
                 <!-- Other -->
                 <div class="footer-context-element d-flex flex-column">
                     <div class="footer-context-title">
