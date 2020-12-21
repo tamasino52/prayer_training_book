@@ -11,7 +11,7 @@ Bootstrap(app)
 cache = Cache()
 cache.init_app(app, config={'CACHE_TYPE': 'simple'})
 
-version = '2.6'
+version = '2.7'
 
 # 데이터베이스 역할을 하는 리스트
 """
@@ -28,7 +28,7 @@ book_list = [
         'title': '기도훈련집 전체 한 번에 읽기',
         'image': '../static/images/blog.jpg',
         'context': 'context/기도훈련집1.html',
-        'mp3': '../static/files/기도훈련집.mp3',
+        'mp3': '../static/files/기도훈련집_audio.mp3',
         'watch': 0,
         'update': '2020-12-09'
     },
@@ -260,7 +260,7 @@ book_list = [
     # 기도훈련집 초등부
     {
         'title': '기도훈련집 초등부 전체 한 번에 읽기',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/church.jpg',
         'context': 'context/초등부 기도훈련집.html',
         'mp3': '../static/files/기도훈련집 초등부(음악).mp3',
         'watch': 0,
@@ -268,7 +268,7 @@ book_list = [
     },
     {
         'title': '개인기도1',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross1.jpg',
         'context': 'context/초등부 개인기도1.html',
         'mp3': '../static/files/초등부+개인기도+1_audio.mp3',
         'watch': 0,
@@ -276,7 +276,7 @@ book_list = [
     },
     {
         'title': '개인기도2',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross2.jpg',
         'context': 'context/초등부 개인기도2.html',
         'mp3': '../static/files/초등부+개인기도+2_audio.mp3',
         'watch': 0,
@@ -284,7 +284,7 @@ book_list = [
     },
     {
         'title': '아침에 일어나서 하는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/day.jpg',
         'context': 'context/초등부 아침에 일어나서 하는 기도.html',
         'mp3': '../static/files/초등부+아침에+일어나서+하는+기도_audio.mp3',
         'watch': 0,
@@ -292,7 +292,7 @@ book_list = [
     },
     {
         'title': '자기 전에 하는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/night.jpg',
         'context': 'context/초등부 자기 전에 하는 기도.html',
         'mp3': '../static/files/초등부+자기+전에+하는+기도_audio.mp3',
         'watch': 0,
@@ -300,7 +300,7 @@ book_list = [
     },
     {
         'title': '식사기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/blog.jpg',
         'context': 'context/초등부 식사기도.html',
         'mp3': '../static/files/초등부+식사기도_audio.mp3',
         'watch': 0,
@@ -308,7 +308,7 @@ book_list = [
     },
     {
         'title': '몸이 아플 때 하는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/blue.jpg',
         'context': 'context/초등부 몸이 아플 때 하는 기도.html',
         'mp3': '../static/files/초등부+몸이+아플+때+하는+기도_audio.mp3',
         'watch': 0,
@@ -316,7 +316,7 @@ book_list = [
     },
     {
         'title': '믿음 생활을 잘하게 해 달라는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross4.jpg',
         'context': 'context/초등부 믿음 생활을 잘하게 해달라는 기도.html',
         'mp3': '../static/files/초등부+믿음+생활을+잘하게+해+달라는+기도_audio.mp3',
         'watch': 0,
@@ -324,7 +324,7 @@ book_list = [
     },
     {
         'title': '전도하기 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross2.jpg',
         'context': 'context/초등부 전도하기 위한 기도.html',
         'mp3': '../static/files/초등부+전도하기+위한+기도_audio.mp3',
         'watch': 0,
@@ -340,7 +340,7 @@ book_list = [
     },
     {
         'title': '믿음이 떨어졌을 때 영적인 힘을 얻기 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross1.jpg',
         'context': 'context/초등부 믿음이 떨어졌을 때 영적인 힘을 얻기 위한 기도.html',
         'mp3': '../static/files/초등부+믿음이+떨어졌을+때+영적인+힘을+얻기+위한+기도_audio.mp3',
         'watch': 0,
@@ -348,7 +348,7 @@ book_list = [
     },
     {
         'title': '시험이 들었을 때 하는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/blue.jpg',
         'context': 'context/초등부 시험이 들었을 때 하는 기도.html',
         'mp3': '../static/files/초등부+시험이+들었을+때+하는+기도_audio.mp3',
         'watch': 0,
@@ -356,7 +356,7 @@ book_list = [
     },
     {
         'title': '좋은 친구를 얻기 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/episode.jpg',
         'context': 'context/초등부 좋은 친구를 얻기 위한 기도.html',
         'mp3': '../static/files/초등부+좋은+친구를+얻기+위한+기도_audio.mp3',
         'watch': 0,
@@ -364,7 +364,7 @@ book_list = [
     },
     {
         'title': '이성 친구를 사귀기 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/newsletter.jpg',
         'context': 'context/초등부 이성 친구를 사귀기 위한 기도.html',
         'mp3': '../static/files/초등부+이성+친구를+사귀기+위한+기도_audio.mp3',
         'watch': 0,
@@ -372,7 +372,7 @@ book_list = [
     },
     {
         'title': '친구와 다투고 헤어졌을 때 하는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/index.jpg',
         'context': 'context/초등부 친구와 다투고 헤어졌을 때 하는 기도.html',
         'mp3': '../static/files/초등부+친구와+다투고+헤어졌을+때+하는+기도_audio.mp3',
         'watch': 0,
@@ -380,7 +380,7 @@ book_list = [
     },
     {
         'title': '친구에게 배신당했을 때 하는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/blog.jpg',
         'context': 'context/초등부 친구에게 배신당했을 때 하는 기도.html',
         'mp3': '../static/files/초등부+친구에게+배신당했을+때+하는+기도_audio.mp3',
         'watch': 0,
@@ -388,7 +388,7 @@ book_list = [
     },
     {
         'title': '공부를 잘하게 해 달라는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/newsletter.jpg',
         'context': 'context/초등부 공부를 잘하게 해달라는 기도.html',
         'mp3': '../static/files/초등부+공부를+잘하게+해+달라는+기도_audio.mp3',
         'watch': 0,
@@ -396,7 +396,7 @@ book_list = [
     },
     {
         'title': '공부가 하기 싫을 때 하는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/newsletter.jpg',
         'context': 'context/초등부 공부가 하기 싫을 때 하는 기도.html',
         'mp3': '../static/files/초등부+공부가+하기+싫을+때+하는+기도_audio.mp3',
         'watch': 0,
@@ -404,7 +404,7 @@ book_list = [
     },
     {
         'title': '부모님께 야단맞았을 때 하는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/family2.jpg',
         'context': 'context/초등부 부모님께 야단맞았을 때 하는 기도.html',
         'mp3': '../static/files/초등부+부모님께+야단맞았을+때+하는+기도_audio.mp3',
         'watch': 0,
@@ -412,7 +412,7 @@ book_list = [
     },
     {
         'title': '선생님에게 야단맞았을 때 하는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/wave2.jpg',
         'context': 'context/초등부 선생님에게 야단맞았을 때 하는 기도.html',
         'mp3': '../static/files/초등부+선생님에게+야단맞았을+때+하는+기도_audio.mp3',
         'watch': 0,
@@ -420,7 +420,7 @@ book_list = [
     },
     {
         'title': '형제, 자매와 다투었을 때 하는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/family1.jpg',
         'context': 'context/초등부 형제, 자매와 다투었을 때 하는 기도.html',
         'mp3': '../static/files/초등부+형제+자매와+다투었을+때+하는+기도_audio.mp3',
         'watch': 0,
@@ -444,7 +444,7 @@ book_list = [
     },
     {
         'title': '기분이 나쁠 때 하는 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross2.jpg',
         'context': 'context/초등부 기분이 나쁠 때 하는 기도.html',
         'mp3': '../static/files/초등부+기분이+나쁠+때+하는+기도_audio.mp3',
         'watch': 0,
@@ -452,7 +452,7 @@ book_list = [
     },
     {
         'title': '교회에서 하는 대표기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/church2.jpg',
         'context': 'context/초등부 교회에서 하는 대표기도.html',
         'mp3': '../static/files/초등부+교회에서+하는+대표기도_audio.mp3',
         'watch': 0,
@@ -460,7 +460,7 @@ book_list = [
     },
     {
         'title': '가정에서 하는 대표기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/family1.jpg',
         'context': 'context/초등부 가정에서 하는 대표기도.html',
         'mp3': '../static/files/초등부+가정에서+하는+대표기도_audio.mp3',
         'watch': 0,
@@ -468,7 +468,7 @@ book_list = [
     },
     {
         'title': '목장에서 하는 대표기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cloud.jpg',
         'context': 'context/초등부 목장에서 하는 대표기도.html',
         'mp3': '../static/files/초등부+목장에서+하는+대표기도_audio.mp3',
         'watch': 0,
@@ -476,7 +476,7 @@ book_list = [
     },
     {
         'title': '가족들 식사 대표기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/forest.jpg',
         'context': 'context/초등부 가족들 식사 대표기도.html',
         'mp3': '../static/files/초등부+가족들+식사+대표기도_audio.mp3',
         'watch': 0,
@@ -492,7 +492,7 @@ book_list = [
     },
     {
         'title': '하나님을 믿지 않는 아빠(엄마)를 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross4.jpg',
         'context': 'context/초등부 하나님을 믿지 않는 아빠(엄마)를 위한 기도.html',
         'mp3': '../static/files/초등부+하나님을+믿지+않는+아빠엄마를+위한+기도_audio.mp3',
         'watch': 0,
@@ -500,7 +500,7 @@ book_list = [
     },
     {
         'title': '하나님을 믿는 할아버지(할머니)를 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross1.jpg',
         'context': 'context/초등부 하나님을 믿는 할아버지(할머니)를 위한 기도.html',
         'mp3': '../static/files/초등부+하나님을+믿는+할아버지(할머니)를+위한+기도_audio.mp3',
         'watch': 0,
@@ -508,7 +508,7 @@ book_list = [
     },
     {
         'title': '하나님을 믿지 않는 할아버지(할머니)를 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross2.jpg',
         'context': 'context/초등부 하나님을 믿지 않는 할아버지(할머니)를 위한 기도.html',
         'mp3': '../static/files/초등부+하나님을+믿지+않는+할아버지할머니를+위한+기도_audio.mp3',
         'watch': 0,
@@ -524,7 +524,7 @@ book_list = [
     },
     {
         'title': '하나님을 믿지 않는 형제(자매)를 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross4.jpg',
         'context': 'context/초등부 하나님을 믿지 않는 형제(자매)를 위한 기도.html',
         'mp3': '../static/files/초등부+하나님을+믿지+않는+형제자매를+위한+기도_audio.mp3',
         'watch': 0,
@@ -532,7 +532,7 @@ book_list = [
     },
     {
         'title': '담임목사님과 사모님을 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/church2.jpg',
         'context': 'context/초등부 담임목사님과 사모님을 위한 기도.html',
         'mp3': '../static/files/초등부+담임목사님과+사모님을+위한+기도_audio.mp3',
         'watch': 0,
@@ -540,7 +540,7 @@ book_list = [
     },
     {
         'title': '부서 담당 목사님(전도사님)을 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross1.jpg',
         'context': 'context/초등부 부서 담당 목사님(전도사님)을 위한 기도.html',
         'mp3': '../static/files/초등부+부서+담당+목사님(전도사님)을+위한+기도_audio.mp3',
         'watch': 0,
@@ -548,7 +548,7 @@ book_list = [
     },
     {
         'title': '교회 선생님을 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross2.jpg',
         'context': 'context/초등부 교회 선생님을 위한 기도.html',
         'mp3': '../static/files/초등부+교회+선생님을+위한+기도_audio.mp3',
         'watch': 0,
@@ -564,7 +564,7 @@ book_list = [
     },
     {
         'title': '하나님을 믿지 않는 친구를 위한 기도',
-        'image': '../static/images/cross3.jpg',
+        'image': '../static/images/cross4.jpg',
         'context': 'context/초등부 하나님을 믿지 않는 친구를 위한 기도.html',
         'mp3': '../static/files/초등부+하나님을+믿지+않는+친구를+위한+기도_audio.mp3',
         'watch': 0,
