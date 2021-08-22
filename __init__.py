@@ -11,7 +11,7 @@ Bootstrap(app)
 cache = Cache()
 cache.init_app(app, config={'CACHE_TYPE': 'simple'})
 
-version = '2.7'
+version = '3.1'
 
 # 데이터베이스 역할을 하는 리스트
 """
@@ -569,7 +569,242 @@ book_list = [
         'mp3': '../static/files/초등부+하나님을+믿지+않는+친구를+위한+기도_audio.mp3',
         'watch': 0,
         'update': '2020-12-09'
-    }
+    },
+    # ---------------------------------------------------------------------------------------
+    # revision
+    # ---------------------------------------------------------------------------------------
+    {
+        'title': '기도훈련집 개정판 전체',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/기도훈련집 개정판.html',
+        'mp3': '../static/files/revision/기도훈련집 개정판.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '기도훈련집 개정판 2배속',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/기도훈련집 개정판.html',
+        'mp3': '../static/files/revision/기도훈련집 개정판 2배속.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '나라를 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/나라를 위한 기도.html',
+        'mp3': '../static/files/revision/나라를+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '교회를 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/교회를 위한 기도.html',
+        'mp3': '../static/files/revision/교회를+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '담임목사님을 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/담임목사님을 위한 기도.html',
+        'mp3': '../static/files/revision/담임목사님을+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '목장과 목장원을 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/목장과 목장원을 위한 기도.html',
+        'mp3': '../static/files/revision/목장과+목장원을+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '태신자를 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/태신자를 위한 기도.html',
+        'mp3': '../static/files/revision/태신자를+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '사람을 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/사람을 위한 기도.html',
+        'mp3': '../static/files/revision/사람을+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '가정을 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/가정을 위한 기도.html',
+        'mp3': '../static/files/revision/가정을+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '남편을 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/남편을 위한 기도.html',
+        'mp3': '../static/files/revision/남편을+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '아내를 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/아내를 위한 기도.html',
+        'mp3': '../static/files/revision/아내를+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '부모님을 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/부모님을 위한 기도.html',
+        'mp3': '../static/files/revision/부모님을+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '자녀를 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/자녀를 위한 기도.html',
+        'mp3': '../static/files/revision/자녀를+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '개인기도 1',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/개인기도1.html',
+        'mp3': '../static/files/revision/개인기도1.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '개인기도 2',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/개인기도2.html',
+        'mp3': '../static/files/revision/개인기도2.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '회개기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/회개기도.html',
+        'mp3': '../static/files/revision/회개기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '영적인 힘을 얻기 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/영적인 힘을 얻기 위한 기도.html',
+        'mp3': '../static/files/revision/영적인+힘을+얻기+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '시험이 있을 때 드리는 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/시험이 있을 때 드리는 기도.html',
+        'mp3': '../static/files/revision/시험이+있을+때+드리는+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '기도가 잘 되지 않을 때 드리는 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/기도가 잘 되지 않을 때 드리는 기도.html',
+        'mp3': '../static/files/revision/기도가+잘+되지+않을+때+드리는+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '삶에 지칠 때 드리는 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/삶에 지칠 때 드리는 기도.html',
+        'mp3': '../static/files/revision/삶에+지칠+때+드리는+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '감사할 때 드리는 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/감사할 때 드리는 기도.html',
+        'mp3': '../static/files/revision/감사할+때+드리는+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '몸이 아플 때 드리는 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/몸이 아플 때 드리는 기도.html',
+        'mp3': '../static/files/revision/몸이+아플+때+드리는+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '부부간에 불화가 있을 때 드리는 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/부부간에 불화가 있을 때 드리는 기도.html',
+        'mp3': '../static/files/revision/부부간에+불화가+있을+때+드리는+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '물질적인 어려움에 있을 때 드리는 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/물질적인 어려움에 있을 때 드리는 기도.html',
+        'mp3': '../static/files/revision/물질적인+어려움에+있을+때+드리는+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '사업을 위한 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/사업을 위한 기도.html',
+        'mp3': '../static/files/revision/사업을+위한+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '하루를 시작하며 드리는 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/하루를 시작하며 드리는 기도.html',
+        'mp3': '../static/files/revision/하루를+시작하며+드리는+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '하루를 마감하며 드리는 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/하루를 마감하며 드리는 기도.html',
+        'mp3': '../static/files/revision/하루를+마감하며+드리는+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '마귀를 물리치는 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/마귀를 물리치는 기도.html',
+        'mp3': '../static/files/revision/마귀를+물리치는+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
+    {
+        'title': '질병을 치료하는 기도',
+        'image': '../static/images/blog.jpg',
+        'context': 'context/revision/질병을 치료하는 기도.html',
+        'mp3': '../static/files/revision/질병을+치료하는+기도.mp3',
+        'watch': 0,
+        'update': '2021-08-22'
+    },
 ]
 
 for idx, book in enumerate(book_list):

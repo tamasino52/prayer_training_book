@@ -6,11 +6,11 @@
 <meta name="keywords" content="기도훈련집, 기도문, 오병이어교회">
 <meta name="description" content="오병이어교회 기도훈련집">
 <meta name="author" content="오병이어교회">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, in''i''tial-scale=1.0">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 
 <link rel="stylesheet" type="text/css" href="../static/styles/bootstrap-4.1.2/bootstrap.min.css">
-<link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css'>
+<link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub'''''''@1.0/kopubdotum.min.css'>
 <link rel="stylesheet" type="text/css" href="../static/styles/home.css?version={{ version }}">
 <link rel="stylesheet" type="text/css" href="../static/styles/home_responsive.css?version={{ version }}">
 
@@ -31,14 +31,73 @@
 	</div>
 
 	<!-- Subheader -->
-	<div class="subheader-container">
+	<div class="subheader-container fill_all subheader center-all">
+        <!-- Header Music Player -->
+		<div class="player_container">
+			<div class="container">
+				<div class="row">
+                    <div class="player d-flex flex-row align-items-start justify-content-start">
+                        <div class="player_content">
+                            <div class="single_player_container">
+                                <div class="single_player d-flex flex-row align-items-center justify-content-start">
+                                    <div id="jplayer_1" class="jp-jplayer" value="../static/files/revision/새벽기도음악.mp3"></div>
+                                    <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+                                        <div class="jp-type-single">
+                                            <div class="player_controls">
+                                                <div class="jp-gui jp-interface d-flex flex-row align-items-center justify-content-start">
+                                                    <div class="jp-controls-holder time_controls d-flex flex-row align-items-center justify-content-between">
+                                                        <div class="jp-controls-holder play_button ml-auto">
+                                                            <button class="jp-play" tabindex="0"></button>
+                                                            <button class="jp-stop" tabindex="1"></button>
+                                                        </div>
+                                                        <div class="jp-progress">
+                                                            <div class="jp-seek-bar">
+                                                                <div class="jp-play-bar"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+				</div>
+			</div>
+		</div>
+        <!--
         <div class="fill_all subheader center-all size-subheader weight-2 text-center">
             기도생활 성공하면 신앙생활 성공하고<br>신앙생활 성공하면 인생도 성공한다
 		</div>
+		-->
 	</div>
 
 	<!-- Intro -->
 	<div class="context-container d-flex flex-column">
+        <div class="book-header size-bookheader weight-1">기도훈련집 개정판</div>
+
+        <hr>
+
+        {% for book in book_list[68:] %}
+        <!-- List -->
+        <div class="context d-flex flex-column">
+            <a href="book/{{ book["id"] }}">
+                <div class="context-title size-pageheader weight-2">{{ book["title"] }}</div>
+            </a>
+            <div class="context-info size-pageinfo weight-2">
+                <ul class="d-flex flex-row">
+                    <li>{{ book['id'] + 1 }}번</li>
+                    <li>{{ book['update'] }}</li>
+                    <li>조회수 {{ book['watch'] }}회</li>
+                </ul>
+            </div>
+            <hr>
+        </div>
+
+        {% endfor %}
+
         <div class="book-header size-bookheader weight-1">기도훈련집1</div>
 
         <hr>
@@ -85,7 +144,7 @@
         <div class="book-header size-bookheader weight-1">기도훈련집 초등부</div>
         <hr>
 
-        {% for book in book_list[29:] %}
+        {% for book in book_list[29:68] %}
         <!-- List -->
         <div class="context d-flex flex-column">
             <a href="book/{{ book["id"] }}">
@@ -128,6 +187,8 @@
 <script src="../static/js/jquery-3.3.1.min.js"></script>
 <script src="../static/styles/bootstrap-4.1.2/popper.js"></script>
 <script src="../static/styles/bootstrap-4.1.2/bootstrap.min.js"></script>
+<script src="../static/plugins/jPlayer/jquery.jplayer.min.js"></script>
+<script src="../static/plugins/jPlayer/jplayer.playlist.min.js"></script>
 <script src="../static/plugins/greensock/TweenMax.min.js"></script>
 <script src="../static/plugins/greensock/TimelineMax.min.js"></script>
 <script src="../static/plugins/scrollmagic/ScrollMagic.min.js"></script>
@@ -136,5 +197,7 @@
 <script src="../static/plugins/easing/easing.js"></script>
 <script src="../static/plugins/progressbar/progressbar.min.js"></script>
 <script src="../static/plugins/parallax-js-master/parallax.min.js"></script>
+<script src="../static/js/home.js"></script>
+
 </body>
 </html>

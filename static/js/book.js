@@ -21,6 +21,14 @@ $(document).ready(function() {
 	setHeader();
 	initSvg();
 
+	$('#fontsize-down').click(function() {
+		jQuery("p").css('font-size','-=1');
+	});
+
+	$('#fontsize-up').click(function() {
+		jQuery("p").css('font-size','+=1');
+	});
+
 	$(window).on('resize', function()
 	{
 		setHeader();
